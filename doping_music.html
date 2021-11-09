@@ -20,6 +20,7 @@
             width: 100%;
             height: 50px;
             background-color: black;
+            box-shadow: 0px 80px 20px 10px #f3f3f3;
         }
 
         .logo-img-box {
@@ -35,12 +36,16 @@
         .menu-area {
             display: flex;
             justify-content: space-around;
-            
+        }
+
+        .fixed-bar {
+            position: fixed;
+            top: 0px;
         }
 
         .link-menu-area ul {
             display: flex;
-            justify-content: center;
+            justify-content: end;
             height: 100%;
         }
 
@@ -83,12 +88,168 @@
             display: flex;
             width: 100%;
             height: 60px;
+            background-color: #fff;
         }
 
         .logo-area {
             display: flex;
             align-items: center;
         }
+
+        /* 메인영역 */
+        main {
+            height: 1000px;
+        }
+
+        .genre-post-container {
+            width: 85%;
+            margin: 0 auto;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            margin-bottom: 100px;
+        }
+
+        .genre-post-area, .genre-post-area2 {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .genre-post-area2 {
+            padding-left: 12.5%;
+        }
+
+        .genre-post-area2 .genre-post-item {
+            width: 28.57%;
+            height: 100%;
+            display: flex;
+        }
+
+        .genre-post-item {
+            width: 25%;
+            height: 100%;
+            display: flex;
+        }
+
+        .album-genre-jacket, .cd-icon {
+            width: 50%;
+
+            color: #fff;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .album-genre-jacket {
+            background-color: brown;
+        }
+
+        
+
+
+        .cd-icon img {
+            width: 97%;
+            height: 100%;
+            position: relative;
+            right: 100%;
+            z-index: -555;
+            transition: 0.5s;
+        }
+
+        .move-cd {
+            right: 23% !important;
+            
+        }
+
+        /* 추천 아티스트 */
+        .artist-container-back {
+            background-color: rgb(26, 26, 26);
+        }
+        .artist-container {
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        .artist-area {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .artist-container-back .name-box-area {
+            width: 100%;
+            color: #fff;
+            background-color: rgb(26, 26, 26);
+        }
+        
+
+        .name-box-area {
+            color: black;
+        }
+
+        .name-box-area .area-name-box {
+            width: 90%;
+            margin: 0 auto;
+            padding-top: 80px;
+            padding-bottom: 50px;
+            font-size: 40px;
+        }
+
+        .artist-post-item {
+            width: 19%;
+
+            margin-bottom: 60px;
+        }
+
+        .artist-name {
+            width: 100%;
+            height: 30px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .artist-img img {
+            width: 100%;
+            -webkit-filter: grayscale(100%);
+            filter: gray;
+        }
+
+        .artist-img img:hover {
+            -webkit-filter: grayscale(0%);
+            filter: none;
+            border: 3px solid #fff;
+        }
+
+        .asdf {
+            
+        }
+
+        .artist-img {
+            position: relative;
+        }
+
+        .artist-detail-box {
+            z-index: 22;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30%;
+            height: 30%;
+            background-color: rgba(0, 0, 0, 0.555);
+            
+        }
+
 
     </style>
 </head>
@@ -108,19 +269,206 @@
             <div class="link-menu-area">
                 <ul>
                     <li>장르별 앨범</li>
-                    <li>아티스트</li>
+                    <li>추천 아티스트</li>
                     <li>추천 앨범</li>
                     <a href="#">둘러보기</a>
                 </ul>
             </div>
-            <div class="menu-empty-box side-box"></div>
+            <!-- <div class="menu-empty-box side-box"></div> -->
         </div>
     </div>
 
+    <!-- 메인 영역 -->
     <main>
+        <div class="name-box-area">
+            <div class="area-name-box">장르별 앨범</div>
+        </div>
+        <div class="genre-post-container">
+            
+            <div class="genre-post-area">
+                <!-- 포스트 -->
+                <div class="genre-post-item">
+                    <div class="album-genre-jacket">힙합/R&B</div>
+                    <div class="cd-icon">
+                        <img src="img/test_cd.png" alt="">
+                    </div>
+                </div>
+
+                <!-- 포스트 -->
+                <div class="genre-post-item">
+                    <div class="album-genre-jacket">밴드음악</div>
+                    <div class="cd-icon">
+                        <img src="img/test_cd.png" alt="">
+                    </div>
+                </div>
+
+                <!-- 포스트 -->
+                <div class="genre-post-item">
+                    <div class="album-genre-jacket">밴드음악</div>
+                    <div class="cd-icon">
+                        <img src="img/test_cd.png" alt="">
+                    </div>
+                </div>
+
+                <!-- 포스트 -->
+                <div class="genre-post-item">
+                    <div class="album-genre-jacket">밴드음악</div>
+                    <div class="cd-icon">
+                        <img src="img/test_cd.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="genre-post-area2">
+                <!-- 포스트 -->
+                <div class="genre-post-item">
+                    <div class="album-genre-jacket">밴드음악</div>
+                    <div class="cd-icon">
+                        <img src="img/test_cd.png" alt="">
+                    </div>
+                </div>
+
+                <!-- 포스트 -->
+                <div class="genre-post-item">
+                    <div class="album-genre-jacket">밴드음악</div>
+                    <div class="cd-icon">
+                        <img src="img/test_cd.png" alt="">
+                    </div>
+                </div>
+
+                <!-- 포스트 -->
+                <div class="genre-post-item">
+                    <div class="album-genre-jacket">밴드음악</div>
+                    <div class="cd-icon">
+                        <img src="img/test_cd.png" alt="">
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+
+
+        <div class="artist-container-back">
+            <div class="name-box-area">
+                <div class="area-name-box">추천 아티스트</div>
+            </div>
+            <div class="artist-container">
+                <div class="artist-area">
+                    <!-- 포스트 -->
+                    <div class="artist-post-item">
+                        <div class="artist-img">
+                            <div class="artist-detail-box">
+                                <div>+</div>
+                                <div>VIEW DETAIL</div>
+                            </div>
+                            <img src="img/릴러말즈.png" alt="">
+                        </div>
+                        <div class="artist-name">Leellamarz</div>
+                    </div>
+
+                    <!-- 포스트 -->
+                    <div class="artist-post-item">
+                        <div class="artist-img">
+                            <img src="img/김심야.png" alt="">
+                        </div>
+                        <div class="artist-name">Kim Ximya</div>
+                    </div>
+
+                    <!-- 포스트 -->
+                    <div class="artist-post-item">
+                        <div class="artist-img">
+                            <img src="img/레드벨벳.png" alt="">
+                        </div>
+                        <div class="artist-name">Red Velvet</div>
+                    </div>
+
+                    <!-- 포스트 -->
+                    <div class="artist-post-item">
+                        <div class="artist-img">
+                            <img src="img/이선희.png" alt="">
+                        </div>
+                        <div class="artist-name">Lee Sun-Hee</div>
+                    </div>
+
+                    <!-- 포스트 -->
+                    <div class="artist-post-item">
+                        <div class="artist-img">
+                            <img src="img/엔버.png" alt="">
+                        </div>
+                        <div class="artist-name">Angelic Buster</div>
+                    </div>
+
+                    <!-- 포스트 -->
+                    <div class="artist-post-item">
+                        <div class="artist-img">
+                            <img src="img/류이치사카모토.png" alt="">
+                        </div>
+                        <div class="artist-name">Ryuichi Sakamoto</div>
+                    </div>
+
+                    <!-- 포스트 -->
+                    <div class="artist-post-item">
+                        <div class="artist-img">
+                            <img src="img/빌에반스.png" alt="">
+                        </div>
+                        <div class="artist-name">William John Evans</div>
+                    </div>
+
+                    <!-- 포스트 -->
+                    <div class="artist-post-item">
+                        <div class="artist-img">
+                            <img src="img/지디.png" alt="">
+                        </div>
+                        <div class="artist-name">G-DRAGON</div>
+                    </div>
+
+                    <!-- 포스트 -->
+                    <div class="artist-post-item">
+                        <div class="artist-img">
+                            <img src="img/헤이즈.png" alt="">
+                        </div>
+                        <div class="artist-name">Heize</div>
+                    </div>
+
+                    <!-- 포스트 -->
+                    <div class="artist-post-item">
+                        <div class="artist-img">
+                            <img src="img/머드더.png" alt="">
+                        </div>
+                        <div class="artist-name">Mudd the student</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     </main>
 
+    <!-- javascript -->
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script>
+
+        // 장르별 앨범에서 hover 시 cd가 나오는 모션
+        $('.album-genre-jacket').hover(function(){
+            $(this).parent('.genre-post-item').children('.cd-icon').children('img').addClass('move-cd');
+        }, function(){
+            $(this).parent('.genre-post-item').children('.cd-icon').children('img').removeClass('move-cd');
+        });
+
+
+        $(document).scroll(function(){
+            let wheel = $(document).scrollTop();
+            if(wheel > 50) {
+                $('.menu-area').addClass('fixed-bar');
+            } else {
+                $('.menu-area').removeClass('fixed-bar');
+            }
+        })
+    </script>
 
 </body>
 </html>
