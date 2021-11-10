@@ -36,6 +36,7 @@
         .menu-area {
             display: flex;
             justify-content: space-around;
+            z-index: 999;
         }
 
         .fixed-bar {
@@ -198,6 +199,15 @@
             padding-top: 80px;
             padding-bottom: 50px;
             font-size: 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .name-box-area .area-name-box i {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            margin-right: 5%;
         }
 
         .artist-post-item {
@@ -218,27 +228,26 @@
             padding: 20px 0;
         }
 
-        .artist-img img {
+        .artist-img-box .artist-img {
             width: 100%;
             -webkit-filter: grayscale(100%);
             filter: gray;
+            border: 3px solid rgba(255, 255, 255, 0);
         }
 
-        .artist-img img:hover {
-            -webkit-filter: grayscale(0%);
-            filter: none;
-            border: 3px solid #fff;
+        .artist-img-hover {
+            -webkit-filter: grayscale(0%) !important;
+            filter: none !important;
+            border: 3px solid #fff !important;
         }
 
-        .asdf {
-            
-        }
-
-        .artist-img {
+        .artist-img-box {
             position: relative;
         }
 
         .artist-detail-box {
+            display: none;
+
             z-index: 22;
             position: absolute;
             top: 50%;
@@ -248,6 +257,19 @@
             height: 30%;
             background-color: rgba(0, 0, 0, 0.555);
             
+            flex-direction: column;
+            color: #fff;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .artist-detail-box .fas {
+            font-size: 30px;
+        }
+
+        .vd-text {
+            font-size: 11px;
+            margin-top: 5%;
         }
 
 
@@ -351,91 +373,151 @@
 
         <div class="artist-container-back">
             <div class="name-box-area">
-                <div class="area-name-box">추천 아티스트</div>
+                <div class="area-name-box">
+                    <div>추천 아티스트</div>
+                    <i class="fas fa-redo"></i>
+                </div>
+                
             </div>
             <div class="artist-container">
                 <div class="artist-area">
                     <!-- 포스트 -->
                     <div class="artist-post-item">
-                        <div class="artist-img">
-                            <div class="artist-detail-box">
-                                <div>+</div>
-                                <div>VIEW DETAIL</div>
+                        <a href="">
+                            <div class="artist-img-box">
+                                <div class="artist-detail-box">
+                                    <div class="fas fa-plus"></div>
+                                    <div class="vd-text">VIEW DETAIL</div>
+                                </div>
+                                <img class="artist-img" src="img/릴러말즈.png" alt="">
                             </div>
-                            <img src="img/릴러말즈.png" alt="">
-                        </div>
+                        </a>
                         <div class="artist-name">Leellamarz</div>
                     </div>
 
                     <!-- 포스트 -->
                     <div class="artist-post-item">
-                        <div class="artist-img">
-                            <img src="img/김심야.png" alt="">
-                        </div>
+                        <a href="">
+                            <div class="artist-img-box">
+                                <div class="artist-detail-box">
+                                    <div class="fas fa-plus"></div>
+                                    <div class="vd-text">VIEW DETAIL</div>
+                                </div>
+                                <img class="artist-img" src="img/김심야.png" alt="">
+                            </div>
+                        </a>
                         <div class="artist-name">Kim Ximya</div>
                     </div>
 
                     <!-- 포스트 -->
                     <div class="artist-post-item">
-                        <div class="artist-img">
-                            <img src="img/레드벨벳.png" alt="">
-                        </div>
+                        <a href="">
+                            <div class="artist-img-box">
+                                <div class="artist-detail-box">
+                                    <div class="fas fa-plus"></div>
+                                    <div class="vd-text">VIEW DETAIL</div>
+                                </div>
+                                <img class="artist-img" src="img/레드벨벳.png" alt="">
+                            </div>
+                        </a>
                         <div class="artist-name">Red Velvet</div>
                     </div>
 
                     <!-- 포스트 -->
                     <div class="artist-post-item">
-                        <div class="artist-img">
-                            <img src="img/이선희.png" alt="">
-                        </div>
+                        <a href="">
+                            <div class="artist-img-box">
+                                <div class="artist-detail-box">
+                                    <div class="fas fa-plus"></div>
+                                    <div class="vd-text">VIEW DETAIL</div>
+                                </div>
+                                <img class="artist-img" src="img/이선희.png" alt="">
+                            </div>
+                        </a>
                         <div class="artist-name">Lee Sun-Hee</div>
                     </div>
 
                     <!-- 포스트 -->
                     <div class="artist-post-item">
-                        <div class="artist-img">
-                            <img src="img/엔버.png" alt="">
-                        </div>
+                        <a href="">
+                            <div class="artist-img-box">
+                                <div class="artist-detail-box">
+                                    <div class="fas fa-plus"></div>
+                                    <div class="vd-text">VIEW DETAIL</div>
+                                </div>
+                                <img class="artist-img" src="img/엔버.png" alt="">
+                            </div>
+                        </a>
                         <div class="artist-name">Angelic Buster</div>
                     </div>
 
                     <!-- 포스트 -->
                     <div class="artist-post-item">
-                        <div class="artist-img">
-                            <img src="img/류이치사카모토.png" alt="">
-                        </div>
+                        <a href="">
+                            <div class="artist-img-box">
+                                <div class="artist-detail-box">
+                                    <div class="fas fa-plus"></div>
+                                    <div class="vd-text">VIEW DETAIL</div>
+                                </div>
+                                <img class="artist-img" src="img/류이치사카모토.png" alt="">
+                            </div>
+                        </a>
                         <div class="artist-name">Ryuichi Sakamoto</div>
                     </div>
 
                     <!-- 포스트 -->
                     <div class="artist-post-item">
-                        <div class="artist-img">
-                            <img src="img/빌에반스.png" alt="">
-                        </div>
+                        <a href="">
+                            <div class="artist-img-box">
+                                <div class="artist-detail-box">
+                                    <div class="fas fa-plus"></div>
+                                    <div class="vd-text">VIEW DETAIL</div>
+                                </div>
+                                <img class="artist-img" src="img/빌에반스.png" alt="">
+                            </div>
+                        </a>
                         <div class="artist-name">William John Evans</div>
                     </div>
 
                     <!-- 포스트 -->
                     <div class="artist-post-item">
-                        <div class="artist-img">
-                            <img src="img/지디.png" alt="">
-                        </div>
+                        <a href="">
+                            <div class="artist-img-box">
+                                <div class="artist-detail-box">
+                                    <div class="fas fa-plus"></div>
+                                    <div class="vd-text">VIEW DETAIL</div>
+                                </div>
+                                <img class="artist-img" src="img/지디.png" alt="">
+                            </div>
+                        </a>
                         <div class="artist-name">G-DRAGON</div>
                     </div>
 
                     <!-- 포스트 -->
                     <div class="artist-post-item">
-                        <div class="artist-img">
-                            <img src="img/헤이즈.png" alt="">
-                        </div>
+                        <a href="">
+                            <div class="artist-img-box">
+                                <div class="artist-detail-box">
+                                    <div class="fas fa-plus"></div>
+                                    <div class="vd-text">VIEW DETAIL</div>
+                                </div>
+                                <img class="artist-img" src="img/헤이즈.png" alt="">
+                            </div>
+                        </a>
                         <div class="artist-name">Heize</div>
                     </div>
 
                     <!-- 포스트 -->
                     <div class="artist-post-item">
-                        <div class="artist-img">
-                            <img src="img/머드더.png" alt="">
-                        </div>
+                        <a href="">
+                            <div class="artist-img-box">
+                                <div class="artist-detail-box">
+                                    <div class="fas fa-plus"></div>
+                                    <div class="vd-text">VIEW DETAIL</div>
+                                </div>
+                                <img class="artist-img" src="img/머드더.png" alt="">
+                            </div>
+                        </a>
                         <div class="artist-name">Mudd the student</div>
                     </div>
                 </div>
@@ -459,7 +541,7 @@
             $(this).parent('.genre-post-item').children('.cd-icon').children('img').removeClass('move-cd');
         });
 
-
+        // 스크롤 시 상단 헤더 메뉴 fiexd
         $(document).scroll(function(){
             let wheel = $(document).scrollTop();
             if(wheel > 50) {
@@ -467,7 +549,18 @@
             } else {
                 $('.menu-area').removeClass('fixed-bar');
             }
-        })
+        });
+
+
+        // 추천 아티스트 hover 시 효과 적용
+        $('.artist-post-item a').hover(function(){
+            $(this).children('.artist-img-box').children('.artist-img').addClass('artist-img-hover');
+            $(this).children('.artist-img-box').children('.artist-detail-box').css('display', 'flex');
+        }, function(){
+            $(this).children('.artist-img-box').children('.artist-img').removeClass('artist-img-hover');
+            $(this).children('.artist-img-box').children('.artist-detail-box').css('display', 'none');
+        });
+
     </script>
 
 </body>
