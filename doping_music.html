@@ -62,6 +62,7 @@
             list-style: none;
             display: flex;
             align-items: center;
+            cursor: pointer;
             
             padding: 0 20px;
             border-top: 2px solid rgba(255, 255, 255, 0);
@@ -106,9 +107,6 @@
         }
 
         /* 메인영역 */
-        main {
-            height: 1000px;
-        }
 
         .genre-post-container {
             width: 85%;
@@ -336,6 +334,7 @@
 
         .recom-album-item {
             width: 16%;
+            cursor: pointer;
         }
 
         .recom-album-item img {
@@ -393,7 +392,7 @@
             margin-top: 2%;
         } 
 
-        .footer {
+        footer {
             width: 100%;
             height: 300px;
             background-color: rgb(58, 58, 58);
@@ -531,9 +530,10 @@
             </div>
             <div class="link-menu-area">
                 <ul>
-                    <li>장르별 앨범</li>
-                    <li>추천 아티스트</li>
                     <li>추천 앨범</li>
+                    <li>주인장 추천</li>
+                    <li>추천 아티스트</li>
+                    <li>장르별 앨범</li>
                     <a href="#">둘러보기</a>
                 </ul>
             </div>
@@ -545,7 +545,7 @@
     <main>
         <!-- 추천 앨범 -->
         <div class="recommend-album-container">
-            <div class="recommend-album-title-area">플레이리스트 그리고 차트.<br>언제나 새로운 즐거움을 느낄 수 있도록.</div>
+            <div class="recommend-album-title-area">이런 음반은 어떠신가요?<br>언제나 새로운 즐거움을 느낄 수 있도록.</div>
             <div class="recommend-menu-area">
                 <ul>
                     <li><div class="playlistmenu-checked-effect">최신앨범</div></li>
@@ -702,13 +702,17 @@
         <!-- 추천 앨범(초안) -->
         <div class="testtest">
             <div class="name-box-area">
-                <div class="area-name-box">추천 앨범</div>
+                <div class="area-name-box page1">추천 앨범</div>
             </div>
             <div class="recom-album-container">
                 <div class="focus-album-area">
+                    
                     <div class="focus-album-img">
-                        <img class="fai" src="img/호랑이소굴커버.png" alt="">
+                        <a href="">
+                            <img class="fai" src="img/호랑이소굴커버.png" alt="">
+                        </a>
                     </div>
+                   
                     <div class="focus-album-detail-area">
                         <div class="focus-album-title">호랑이소굴</div>
                         <div class="focus-album-detail">기리보이 | HIP-HOP | 2019-10-13</div>
@@ -752,7 +756,7 @@
         <!-- 추천 아티스트 -->
         <div class="artist-container-back">
             <div class="name-box-area">
-                <div class="area-name-box">
+                <div class="area-name-box page2">
                     <div>추천 아티스트</div>
                     <i class="fas fa-redo"></i>
                 </div>
@@ -906,7 +910,7 @@
         
         <!-- 장르별 앨범 리스트 -->
         <div class="name-box-area">
-            <div class="area-name-box">장르별 앨범 리스트</div>
+            <div class="area-name-box page3">장르별 앨범 리스트</div>
         </div>
         <div class="genre-post-container">
             
@@ -987,10 +991,10 @@
             </div>
         </div>
 
-        <div class="footer" style="color: rgb(250, 250, 250);">footer</div>
+        
     </main>
 
-
+    <footer>footer</footer>
     
     
 
@@ -1088,6 +1092,22 @@
             $(this).addClass('focus-album-effect');
             let img_src = $(this).children('img').attr("src");
             $('.fai').attr("src", img_src);
+        });
+
+        // 스크롤 이동 메뉴
+        $('.link-menu-area ul li').click(function(){
+            let offset;
+            if($(this).text() == "추천 앨범") {
+                offset = $('.logo-bar-area').offset();
+            } else if($(this).text() == "주인장 추천") {
+                offset = $('.page1').offset();
+            } else if($(this).text() == "추천 아티스트") {
+                offset = $('.page2').offset();
+            } else if($(this).text() == "장르별 앨범") {
+                offset = $('.page3').offset();
+            }
+
+            $("html, body").animate({scrollTop : offset.top},400);
         });
 
     </script>
