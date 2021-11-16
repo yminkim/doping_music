@@ -222,7 +222,6 @@
             display: flex;
             flex-wrap: wrap;
 
-            padding: 1%;
         }
 
         .post-item {
@@ -291,8 +290,12 @@
         /* 메인 우측 메뉴 */
         .artist-board-container {
             width: 33.5%;
-            height: 1000px;
+            height: 1100px;
             border: 1px solid rgba(204, 204, 204, 0);
+        }
+
+        .comment-list-area::-webkit-scrollbar {
+
         }
 
         .youtube-box {
@@ -308,7 +311,105 @@
             width: 98%;
         }
 
+        .comment-title {
+            margin: 10% 0 5% 0;
+        }
 
+        .comment-input-area {
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .comment-input-area textarea {
+            width: 100%;
+            resize: none;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            padding: 3%;
+            
+        }
+
+        .comment-input-area textarea::-webkit-scrollbar {
+            display: none;
+        }
+
+        .comment-input-area textarea:focus {
+            outline: none;            
+        }
+
+        .text-count-box {
+            font-family: '맑은고딕';
+            padding: 1.5% 3%;
+            text-align: end;
+            font-size: 13px;
+            width: 100%;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-top: none;
+
+            
+        }
+
+        .comment-input-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 0 2%;
+            margin-bottom: 2%;
+        }
+
+        .comment-input-container button {
+            width: 20%;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .comment-input-container button:active {
+            background-color: rgb(245, 245, 245);
+            border: 1px solid #ccc;
+        }
+
+
+
+        .comment-count-box {
+            font-size: 24px;
+            padding: 3.5%;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .comment-count-box span {
+            font-weight: bold;
+            color: #1fb10d;
+        }
+
+        .comment-list-area {
+            max-height: 40%;
+            padding: 3.5%;
+
+            overflow: scroll;
+            overflow-x: hidden;
+        }
+
+        .comment-item {
+            margin-bottom: 2%;
+            border-bottom: 1px dotted #ccc;
+            padding: 2% 0;
+        }
+
+        .write-info {
+            display: flex;
+            color: gray;
+            font-size: 12px;
+        }
+
+        .comment-content {
+            color: #181818;
+            font-size: 15px;
+            margin-bottom: 1%;
+        }
+
+    
     </style>
 </head>
 <body>
@@ -499,10 +600,99 @@
 
             <!-- 메인 우측 영역 -->
             <div class="artist-board-container">
-                <div class="title-box first-title">추천영상</div>
+                <div class="title-box">추천영상</div>
                 <div class="youtube-box">
                     <iframe src="https://www.youtube.com/embed/M48Dzb3oc6o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
+
+                <div class="title-box comment-title">코멘트</div>
+                <div class="comment-input-container">
+                    <div class="comment-input-area">
+                        <textarea name="" id="" maxlength="100" placeholder="어떤 아티스트인가요?"></textarea>
+                        <div class="text-count-box">(000/100)</div>
+                    </div>
+                    <button>등록</button>
+                </div>
+
+                <div class="comment-count-box">총 <span>70</span>개</div>
+                <div class="comment-list-area">
+                    <!-- 아이템 -->
+                    <div class="comment-item">
+                        <div class="comment-content">어쩌구 저쩌구 역시 이센스 짱이네 호호</div>
+                        <div class="write-info">
+                            <div class="writer">센충이</div>
+                            <div class="kanmaki">|</div>
+                            <div class="write-date">2017.10.08</div>
+                            <div class="kanmaki">|</div>
+                            <div>편집</div>
+                        </div>
+                    </div>
+
+                    <!-- 아이템 -->
+                    <div class="comment-item">
+                        <div class="comment-content">이센스는 전설이다 <br>미안하다 이거 보여주려고 어그로 끌었다❤❤</div>
+                        <div class="write-info">
+                            <div class="writer">센충이</div>
+                            <div class="kanmaki">|</div>
+                            <div class="write-date">2017.10.08</div>
+                            <div class="kanmaki">|</div>
+                            <div>편집</div>
+                        </div>
+                    </div>
+
+                    <!-- 아이템 -->
+                    <div class="comment-item">
+                        <div class="comment-content">요즘은 유튭에서 이센스 노래 잘 안 나오네, 딩고 프리스타일 일 좀 해라~!!</div>
+                        <div class="write-info">
+                            <div class="writer">센충이</div>
+                            <div class="kanmaki">|</div>
+                            <div class="write-date">2017.10.08</div>
+                            <div class="kanmaki">|</div>
+                            <div>편집</div>
+                        </div>
+                    </div>
+
+                    <!-- 아이템 -->
+                    <div class="comment-item">
+                        <div class="comment-content">어쩌구 저쩌구 역시 이센스 짱이네 호호</div>
+                        <div class="write-info">
+                            <div class="writer">센충이</div>
+                            <div class="kanmaki">|</div>
+                            <div class="write-date">2017.10.08</div>
+                            <div class="kanmaki">|</div>
+                            <div>편집</div>
+                        </div>
+                    </div>
+
+                    <!-- 아이템 -->
+                    <div class="comment-item">
+                        <div class="comment-content">이센스는 전설이다 <br>미안하다 이거 보여주려고 어그로 끌었다❤❤</div>
+                        <div class="write-info">
+                            <div class="writer">센충이</div>
+                            <div class="kanmaki">|</div>
+                            <div class="write-date">2017.10.08</div>
+                            <div class="kanmaki">|</div>
+                            <div>편집</div>
+                        </div>
+                    </div>
+
+                    <!-- 아이템 -->
+                    <div class="comment-item">
+                        <div class="comment-content">요즘은 유튭에서 이센스 노래 잘 안 나오네, 딩고 프리스타일 일 좀 해라~!!</div>
+                        <div class="write-info">
+                            <div class="writer">센충이</div>
+                            <div class="kanmaki">|</div>
+                            <div class="write-date">2017.10.08</div>
+                            <div class="kanmaki">|</div>
+                            <div>편집</div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
             </div>
         </div>
 
