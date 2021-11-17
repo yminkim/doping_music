@@ -12,6 +12,11 @@
             src: url("./Apple+산돌고딕+Neo/AppleSDGothicNeoB.ttf");
         }
 
+        @font-face {
+            font-family: "apple-neo2";
+            src: url("./Apple+산돌고딕+Neo/AppleSDGothicNeoL.ttf");
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -149,6 +154,13 @@
             border-bottom: 1px solid #ccc;
         }
 
+        .title-box2 {
+            font-size: 4rem;
+
+            display: flex;
+            align-items: center;
+        }
+
         .first-title {
             margin-bottom: 2.5%;
         }
@@ -160,6 +172,8 @@
         }
 
         .artist-img {
+            padding: 0.5%;
+            border: 1px solid black;
             width: 45%;
         }
 
@@ -354,6 +368,8 @@
         }   
 
         .introduce-description {
+            font-family: 'apple-neo2' !important;
+            font-weight: bold;
             font-size: 1.4rem;
             padding: 1% 1.5%;
         }
@@ -370,6 +386,66 @@
         }
 
     
+        /* 트랙리스트 */
+        .track-container {
+            display: flex;
+            justify-content: center;
+            
+        }
+
+        .track-area {
+            width: 100%;
+            border-top: 3px solid black;
+            border-bottom: 3px solid black;
+        }
+
+        .track-item {
+            font-size: 2.4rem;
+            padding: 1% 5%;
+            display: flex;
+        }
+
+        .track-item:not(:nth-last-child(1)) {
+            border-bottom: 1px solid gray;
+        }
+
+        .track-item pre {
+            font-family: 'apple-neo2';
+        }
+
+        .music-info-box {
+            display: flex;
+            width: 90%;
+        }
+
+        .track-item a {
+            margin-left: auto;
+            line-height: 125%;
+            text-decoration: none;
+            color: red;
+        }
+
+        .music-title {
+            margin-left: 1%;
+        }
+
+        .music-title-type {
+            margin-left: 3%;
+            font-size: 2rem;
+            color: #ffb741;
+            display: flex;
+            align-items: center;
+        }
+
+        .music-numbering {
+            min-width: 12%;
+        }
+
+        .clicked-effect {
+            background-color: #f1f1f1;
+        }
+
+
     </style>
 </head>
 <body>
@@ -433,7 +509,7 @@
                             </div>
 
                             <div class="album-introduce-area">
-                                <div class="album-introduce-title">앨범 소개</div>
+                                <div class="album-introduce-title">INTRODUCE</div>
                                 <div class="introduce-description">이센스가 감옥에서 출소한 뒤 처음으로 발매된 앨범. 출소한 뒤 자신이 감옥에 있던 사이에 세상은 들어가기 전과는 조금은 달라져있음을 느꼈고 6개월 정도의 앨범 준비 기간을 정하고 세상과 단절된 상황을 스스로 만들어냈다.</div>
                             </div>
                             <!-- 
@@ -447,9 +523,108 @@
                     </div>
                 </div>
                 <div class="discography-area">
-                    <div class="title-box">TRACKLIST</div>
-                    
+                    <div class="title-box2">TRACKLIST</div>
+                    <div class="track-container">
+                        <div class="track-area">
+                            <!-- 트랙 아이템 -->
+                            <div class="track-item clicked-effect">
+                                <div class="music-info-box">
+                                    <div class="music-numbering">01</div>
+                                    <div class="music-title">COLD WORLD</div>
+                                </div>
 
+                            </div>
+
+                            <!-- 트랙 아이템 -->
+                            <div class="track-item">
+                                <div class="music-info-box">
+                                    <div class="music-numbering">02</div>
+                                    <div class="music-title">알아야겠어</div>
+                                    
+                                </div>
+
+                                
+                                <a class="fab fa-youtube" href=""></a>
+                                
+                            </div>
+
+                            <!-- 트랙 아이템 -->
+                            <div class="track-item">
+                                <div class="music-info-box">
+                                    <div class="music-numbering">03</div>
+                                    <div class="music-title">BUCKY FEAT. MASTA WU, QIM ISLE</div>
+                                </div>
+                            </div>
+
+                            <!-- 트랙 아이템 -->
+                            <div class="track-item">
+                                <div class="music-info-box">
+                                    <div class="music-numbering">04</div>
+                                    <div class="music-title">CLOCK FEAT. 김심야</div>
+                                    <div class="music-title-type">TITLE</div>
+                                </div>
+
+                                <a class="fab fa-youtube" href=""></a>
+                            </div>
+
+                            <!-- 트랙 아이템 -->
+                            <div class="track-item">
+                                <div class="music-info-box">
+                                    <div class="music-numbering">05</div>
+                                    <div class="music-title">그XX아들같이</div>
+                                </div>
+                            </div>
+
+                            <!-- 트랙 아이템 -->
+                            <div class="track-item">
+                                <div class="music-info-box">
+                                    <div class="music-numbering">06</div>
+                                    <div class="music-title">ALL GOOD THING</div>
+                                </div>
+                            </div>
+
+                            <!-- 트랙 아이템 -->
+                            <div class="track-item">
+                                <div class="music-info-box">
+                                    <div class="music-numbering">07</div>
+                                    <div class="music-title">DANCE</div>
+                                </div>
+                            </div>
+
+                            <!-- 트랙 아이템 -->
+                            <div class="track-item">
+                                <div class="music-info-box">
+                                    <div class="music-numbering">08</div>
+                                    <div class="music-title">BOBOS MOTEL</div>
+                                </div>
+                            </div>
+
+                            <!-- 트랙 아이템 -->
+                            <div class="track-item">
+                                <div class="music-info-box">
+                                    <div class="music-numbering">09</div>
+                                    <div class="music-title">BUTTONS</div>
+                                </div>
+                            </div>
+
+                            <!-- 트랙 아이템 -->
+                            <div class="track-item">
+                                <div class="music-info-box">
+                                    <div class="music-numbering">10</div>
+                                    <div class="music-title">05.30.18</div>
+                                </div>
+                            </div>
+
+                            <!-- 트랙 아이템 -->
+                            <div class="track-item">
+                                <div class="music-info-box">
+                                    <div class="music-numbering">11</div>
+                                    <div class="music-title">RADER FEAT.김심야</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                     
                 </div>
             </div>
@@ -544,7 +719,47 @@
                         </div>
                     </div>
 
-
+                    <!-- 아이템 -->
+                    <div class="comment-item">
+                        <div class="comment-content">요즘은 유튭에서 이센스 노래 잘 안 나오네, 딩고 프리스타일 일 좀 해라~!!</div>
+                        <div class="write-info">
+                            <div class="writer">센충이</div>
+                            <div class="kanmaki">|</div>
+                            <div class="write-date">2017.10.08</div>
+                            <div class="kanmaki">|</div>
+                            <div>편집</div>
+                        </div>
+                    </div><!-- 아이템 -->
+                    <div class="comment-item">
+                        <div class="comment-content">요즘은 유튭에서 이센스 노래 잘 안 나오네, 딩고 프리스타일 일 좀 해라~!!</div>
+                        <div class="write-info">
+                            <div class="writer">센충이</div>
+                            <div class="kanmaki">|</div>
+                            <div class="write-date">2017.10.08</div>
+                            <div class="kanmaki">|</div>
+                            <div>편집</div>
+                        </div>
+                    </div><!-- 아이템 -->
+                    <div class="comment-item">
+                        <div class="comment-content">요즘은 유튭에서 이센스 노래 잘 안 나오네, 딩고 프리스타일 일 좀 해라~!!</div>
+                        <div class="write-info">
+                            <div class="writer">센충이</div>
+                            <div class="kanmaki">|</div>
+                            <div class="write-date">2017.10.08</div>
+                            <div class="kanmaki">|</div>
+                            <div>편집</div>
+                        </div>
+                    </div><!-- 아이템 -->
+                    <div class="comment-item">
+                        <div class="comment-content">요즘은 유튭에서 이센스 노래 잘 안 나오네, 딩고 프리스타일 일 좀 해라~!!</div>
+                        <div class="write-info">
+                            <div class="writer">센충이</div>
+                            <div class="kanmaki">|</div>
+                            <div class="write-date">2017.10.08</div>
+                            <div class="kanmaki">|</div>
+                            <div>편집</div>
+                        </div>
+                    </div>
 
                 </div>
 
@@ -563,10 +778,13 @@
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous"></script>
     <script>
-        $('.album-type-menu ul li').click(function(){
-            $('.album-type-menu ul li').removeClass('bold');
-            $(this).addClass('bold');
+        // 트랙 선택 시 포커싱
+        $('.track-item').click(function(){
+            $('.track-item').removeClass('clicked-effect');
+            $(this).addClass('clicked-effect');
         });
+
+
 
 
 
