@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Artist | Doping Music</title>
+    <title>Album | Doping Music</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
     <link rel="shortcut icon" href="./img/pss_ico.ico.png">
 
@@ -19,13 +19,14 @@
             font-family: 'apple-neo';
         }
 
+        html {
+            font-size: 10px;
+        }
+
         img {
             display: block;
         }
 
-        html {
-            font-size: 10px;
-        }
          
 
         /* 상단바(상) */
@@ -159,7 +160,7 @@
         }
 
         .artist-img {
-            width: 35%;
+            width: 45%;
         }
 
         .artist-img img {
@@ -167,14 +168,19 @@
         }
         
         .info-group {
+            font-size: 1.6rem;
             display: flex;
             margin: 5px;
-            font-size: 1.6rem;
         }
 
         .info-item {
             min-width: 70px;
             color: #4c4c4c;
+
+        }
+
+        .album-introduce-title {
+            font-size: 1.6rem;
         }
 
         .info-contents {
@@ -182,17 +188,15 @@
         }
 
         .artist-info-box {
-            width: 58%;
-
-            border-top: 3px solid black;
-            border-bottom: 3px solid black;
+            width: 45%;
         }
 
         .ai-name {
-            font-size: 3.5rem;
+            font-size: 5rem;
             padding-top: 5px;
             padding-left: 10px;
-            color: black;
+            background-color: black;
+            color: #fff;
             margin-bottom: 5%;
         }
 
@@ -205,103 +209,23 @@
             margin: 1.5% 0;
         }
 
-        .album-type-menu ul {
-            display: flex;
-        }
-
-        .album-type-menu ul li {
-            list-style: none;
-            font-size: 1.5rem;
-            color: #4c4c4c;
-            cursor: pointer;
-        }
-
-        .bold {
-            font-weight: bold;
-        }
+        
 
         .kanmaki {
             margin: 0 3%;
         }
 
-        .album-post-area {
-            border: 1px solid rgba(204, 204, 204, 0);
-            /* border-radius: 10px; */
-            width: 100%;
-            
-            display: flex;
-            flex-wrap: wrap;
-
-        }
-
-        .post-item {
-            width: 25%;
-            padding: 1%;
-            
-            display: flex;
-            flex-direction: column;
-            border: 1px solid rgba(128, 128, 128, 0);
-        }
-
-        .post-item:hover {
-            border: 1px solid #ccc;
-        }
-
-        .post-img img {
-            width: 100%;
-        }
-
-        .post-info {
-            display: flex;
-            flex-direction: column;
-            padding: 2% 1% 1% 1%;
-        }
-
-        .post-title {
-            font-size: 1.6rem;
-        }
-
-        .post-release-date, .post-album-type {
-            font-size: 1.3rem;
-            color: #585858;
-        }
-
-        .post-aulbum-detail {
-            display: flex;
-            flex-direction: column;
-            margin: 5% 0;
-        }
-
-        .post-comment {
-            font-size: 1.4rem;
-            height: 40px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-        }
-
-        .post-vm {
-            margin-top: 4%;
-            font-size: 1.4rem;
-            margin-left: auto;
-        }
-
-        .post-item a {
-            text-decoration: none;
-            color: black;
-        }
-
-        .post-vm span {
-            color: #428bca;
-        }
+        
 
         /* 메인 우측 메뉴 */
         .artist-board-container {
             width: 33.5%;
             height: 1100px;
             border: 1px solid rgba(204, 204, 204, 0);
+        }
+
+        .comment-list-area::-webkit-scrollbar {
+
         }
 
         .youtube-box {
@@ -401,7 +325,6 @@
 
             overflow: scroll;
             overflow-x: hidden;
-
             border-bottom: 1px solid #ccc;
         }
 
@@ -423,6 +346,18 @@
             margin-bottom: 1%;
         }
 
+        .album-introduce-area {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 48%;
+        }   
+
+        .introduce-description {
+            font-size: 1.4rem;
+            padding: 1% 1.5%;
+        }
+
         .comment-item:nth-last-child(1) {
             border-bottom: 1px solid #ccc;
         }
@@ -433,6 +368,7 @@
             height: 300px;
             background-color: rgb(58, 58, 58);
         }
+
     
     </style>
 </head>
@@ -468,157 +404,53 @@
         <div class="main-container">
             <div class="artist-info-container">
                 <div class="introduce-area">
-                    <div class="title-box first-title">WHO</div>
+                    <div class="title-box first-title">DISCOGRAPHY</div>
                     <div class="artist-box">
                         <div class="artist-img">
-                            <img src="img/이방인.png" alt="">
+                            <img src="img/이센스.png" alt="">
                         </div>
                         <div class="artist-info-box">
-                            <div class="ai-name">E SENS</div>
+                            <div class="ai-name">이방인</div>
 
                             <div class="info-group">
-                                <dt class="info-item">국적</dt>
-                                <dl class="info-contents">대한민국</dl>
+                                <dt class="info-item">ALBUM</dt>
+                                <dl class="info-contents">이방인</dl>
                             </div>
 
                             <div class="info-group">
-                                <dt class="info-item">활동장르</dt>
-                                <dl class="info-contents">힙합/R&B</dl>
+                                <dt class="info-item">발매일</dt>
+                                <dl class="info-contents">2019.07.22</dl>
                             </div>
 
                             <div class="info-group">
-                                <dt class="info-item">소속사</dt>
+                                <dt class="info-item">장르</dt>
+                                <dl class="info-contents">HIPHOP</dl>
+                            </div>
+
+                            <div class="info-group">
+                                <dt class="info-item">기획사</dt>
                                 <dl class="info-contents">비스츠앤네이티브스</dl>
                             </div>
 
-                            <div class="info-group">
-                                <dt class="info-item">출생</dt>
-                                <dl class="info-contents">1987.02.09</dl>
+                            <div class="album-introduce-area">
+                                <div class="album-introduce-title">앨범 소개</div>
+                                <div class="introduce-description">이센스가 감옥에서 출소한 뒤 처음으로 발매된 앨범. 출소한 뒤 자신이 감옥에 있던 사이에 세상은 들어가기 전과는 조금은 달라져있음을 느꼈고 6개월 정도의 앨범 준비 기간을 정하고 세상과 단절된 상황을 스스로 만들어냈다.</div>
                             </div>
-
+                            <!-- 
                             <div class="info-group artist-main-song">
-                                <dt class="info-item">대표곡</dt>
+                                <dt class="info-item"></dt>
                                 <dl class="info-contents">Tick Tock(Feat. Kim Ximya)</dl>
-                            </div>
+                            </div> -->
                             
 
                         </div>
                     </div>
                 </div>
                 <div class="discography-area">
-                    <div class="title-box">DISCOGRAPHY</div>
-                    <div class="album-type-menu">
-                        <ul>
-                            <li class="bold">ALL</li>
-                            <div class="kanmaki">|</div>
-                            <li>SINGLE</li>
-                            <div class="kanmaki">|</div>
-                            <li>ALBUM</li>
-                            <div class="kanmaki">|</div>
-                            <li>OTHERS</li>
-                        </ul>
-                    </div>
+                    <div class="title-box">TRACKLIST</div>
+                    
 
-                    <div class="album-post-area">
-                        <!-- 포스트 -->
-                        <div class="post-item">
-                            <a href="">
-                                <div class="post-img">
-                                    <img src="img/마리골드.png" alt="">
-                                </div>
-                                <div class="post-info">
-                                    <div class="post-title">Marigold Tapes</div>
-                                    <div class="post-aulbum-detail">
-                                        <div class="post-release-date">2020.08.27</div>
-                                        <div class="post-album-type">EP</div>
-                                    </div>
-                                    <!-- 요건 앨범 한줄평 -->
-                                    <div class="post-comment">에넥도트 5주년 기념 EP !</div>
-                                    <div class="post-vm"><span>view more </span>></div>
-                                </div>
-                            </a>
-                        </div>
-
-
-                        <!-- 포스트 -->
-                        <div class="post-item">
-                            <a href="">
-                                <div class="post-img">
-                                    <img src="img/이센스.png" alt="">
-                                </div>
-                                <div class="post-info">
-                                    <div class="post-title">이방인</div>
-                                    <div class="post-aulbum-detail">
-                                        <div class="post-release-date">2019.07.22</div>
-                                        <div class="post-album-type">앨범</div>
-                                    </div>
-                                    <!-- 요건 앨범 한줄평 -->
-                                    <div class="post-comment">속세에 돌아온 이센스의 명반</div>
-                                    <div class="post-vm"><span>view more </span>></div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- 포스트 -->
-                        <div class="post-item">
-                            <a href="">
-                                <div class="post-img">
-                                    <img src="img/kmh.png" alt="">
-                                </div>
-                                <div class="post-info">
-                                    <div class="post-title">The Anecdote</div>
-                                    <div class="post-aulbum-detail">
-                                        <div class="post-release-date">2015.08.27</div>
-                                        <div class="post-album-type">앨범</div>
-                                    </div>
-                                    <!-- 요건 앨범 한줄평 -->
-                                    <div class="post-comment">2015년 최고의 음반</div>
-                                    <div class="post-vm"><span>view more </span>></div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- 포스트 -->
-                        <div class="post-item">
-                            <a href="">
-                                <div class="post-img">
-                                    <img src="img/kmh.png" alt="">
-                                </div>
-                                <div class="post-info">
-                                    <div class="post-title">TEST COVER</div>
-                                    <div class="post-aulbum-detail">
-                                        <div class="post-release-date">9999.99.99</div>
-                                        <div class="post-album-type">앨범</div>
-                                    </div>
-                                    <!-- 요건 앨범 한줄평 -->
-                                    <div class="post-comment">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo maxime sint totam obcaecati repellendus impedit, dolore commodi rerum minus aspernatur corrupti recusandae soluta voluptatibus nulla expedita nesciunt cumque laborum eius.</div>
-                                    <div class="post-vm"><span>view more </span>></div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- 포스트 -->
-                        <div class="post-item">
-                            <a href="">
-                                <div class="post-img">
-                                    <img src="img/kmh.png" alt="">
-                                </div>
-                                <div class="post-info">
-                                    <div class="post-title">TEST COVER</div>
-                                    <div class="post-aulbum-detail">
-                                        <div class="post-release-date">9999.99.99</div>
-                                        <div class="post-album-type">앨범</div>
-                                    </div>
-                                    <!-- 요건 앨범 한줄평 -->
-                                    <div class="post-comment">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo maxime sint totam obcaecati repellendus impedit, dolore commodi rerum minus aspernatur corrupti recusandae soluta voluptatibus nulla expedita nesciunt cumque laborum eius.</div>
-                                    <div class="post-vm"><span>view more </span>></div>
-                                </div>
-                            </a>
-                        </div>
-
-                        
-
-                    </div>
+                    
                 </div>
             </div>
 
@@ -724,7 +556,6 @@
     </main>
 
     <footer>footer</footer>
-    
 
     <!-- javascript -->
     <script
