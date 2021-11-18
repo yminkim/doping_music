@@ -133,7 +133,7 @@
         }
 
         .post-container {
-            width: 75%;
+            width: 77%;
 
             display: flex;
             flex-direction: column;
@@ -146,13 +146,12 @@
         .list-title-area {
             margin: 0 1%;
             font-size: 4rem;
-            background-color: burlywood;
         }
 
         .item-count-area {
-            margin: 0 1%;
+            margin: 2% 1%;
             font-size: 1.6rem;
-            background-color: cadetblue;
+            color: #565656;
         }
 
         .post-list-area {
@@ -162,7 +161,7 @@
 
         .post-item {
             width: 15.5%;
-            margin: 0.584%;
+            margin: 0.58%;
         }
 
         .post-item a {
@@ -196,6 +195,128 @@
 
         .post-info-area {
             padding: 2%;
+        }
+
+        footer {
+            width: 100%;
+            height: 300px;
+            background-color: rgb(58, 58, 58);
+        }
+
+        /* 페이지네이션 */
+        .pagenation-area {
+            display: flex;
+            justify-content: center;
+            margin: 10rem 0;
+        }
+
+        .number-page {
+            display: flex;
+        }
+
+        .page-box {
+            cursor: pointer;
+            width: 3.5rem;
+            height: 3.5rem;
+            margin: 0 5px;
+            border-radius: 3.5rem;
+            font-size: 1.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(68, 68, 68);
+        }
+
+        .page-box:hover {
+            color: black;
+        }
+
+        .checked-page {
+            font-weight: bold;
+            color: black;
+            background-color: #d3d3d3;
+        }
+
+        /* 옵션 영역 */
+        .option-container {
+            height: 950px;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            
+        }
+
+        .option-area {
+            height: 85.5%;
+        }
+
+        .option-title {
+            display: flex;
+            width: 100%;
+            height: 6rem;
+            padding: 0.5%;
+            border: 2px solid rgba(0, 0, 0, 0);
+            border-radius: 1.3rem;
+        }
+
+        .option-title:hover {
+            border: 2px solid black;
+        }
+
+        .inbox {
+            background-color: rgb(228, 228, 228);
+            border-radius: 1rem;
+            width: 100%;
+            padding: 5%;
+            display: flex;
+            align-items: center;
+            font-size: 2.2rem;
+            justify-content: space-between;
+        }
+
+        .open-option-box {
+            transform: rotate(180deg);
+        }
+
+        .sort-item-area {
+            display: flex;
+            align-items: center;
+            padding: 5%;
+            font-size: 1.6rem;
+            width: 97%;
+            height: 4.5rem;
+            border-radius: 5px;
+            border: 1px solid black;
+            margin: 0.5% 0;
+            justify-content: space-between;
+        }
+
+        .sort-list-area {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .sort-check {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 3rem;
+            border: 1px solid black;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sort-checked {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 2rem;
+            background-color: black;
+        }
+
+        .hide-op {
+            display: none;
         }
 
     </style>
@@ -324,18 +445,223 @@
                             </a>
                         </div>
 
+                        <!-- 포스트 -->
+                        <div class="post-item">
+                            <a href="">
+                                <div class="post-img-area">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
+                                </div>
+                                <div class="post-info-area">
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 포스트 -->
+                        <div class="post-item">
+                            <a href="">
+                                <div class="post-img-area">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
+                                </div>
+                                <div class="post-info-area">
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 포스트 -->
+                        <div class="post-item">
+                            <a href="">
+                                <div class="post-img-area">
+                                    <img src="img/이방인.png" alt="">
+                                </div>
+                                <div class="post-info-area">
+                                    <div class="post-title">이방인</div>
+                                    <div class="post-artist">E SENS</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 포스트 -->
+                        <div class="post-item">
+                            <a href="">
+                                <div class="post-img-area">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
+                                </div>
+                                <div class="post-info-area">
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 포스트 -->
+                        <div class="post-item">
+                            <a href="">
+                                <div class="post-img-area">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
+                                </div>
+                                <div class="post-info-area">
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 포스트 -->
+                        <div class="post-item">
+                            <a href="">
+                                <div class="post-img-area">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
+                                </div>
+                                <div class="post-info-area">
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 포스트 -->
+                        <div class="post-item">
+                            <a href="">
+                                <div class="post-img-area">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
+                                </div>
+                                <div class="post-info-area">
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 포스트 -->
+                        <div class="post-item">
+                            <a href="">
+                                <div class="post-img-area">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
+                                </div>
+                                <div class="post-info-area">
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 포스트 -->
+                        <div class="post-item">
+                            <a href="">
+                                <div class="post-img-area">
+                                    <img src="img/이방인.png" alt="">
+                                </div>
+                                <div class="post-info-area">
+                                    <div class="post-title">이방인</div>
+                                    <div class="post-artist">E SENS</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 포스트 -->
+                        <div class="post-item">
+                            <a href="">
+                                <div class="post-img-area">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
+                                </div>
+                                <div class="post-info-area">
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 포스트 -->
+                        <div class="post-item">
+                            <a href="">
+                                <div class="post-img-area">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
+                                </div>
+                                <div class="post-info-area">
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 포스트 -->
+                        <div class="post-item">
+                            <a href="">
+                                <div class="post-img-area">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
+                                </div>
+                                <div class="post-info-area">
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
+                                </div>
+                            </a>
+                        </div>
+
 
                     </div>
-                    <div class="pagenation-area"></div>
+                    <div class="pagenation-area">
+                        <div class="first-page page-box fas fa-angle-double-left"></div>
+                        <div class="number-page">
+                            <div class="page-box checked-page">1</div>
+                            <div class="page-box">2</div>
+                            <div class="page-box">3</div>
+                            <div class="page-box">4</div>
+                        </div>
+                        <div class="end-page page-box fas fa-angle-double-right"></div>
+                    </div>
                 </div>
                 <!-- 옵션 영역 -->
-                <div class="option-container"></div>
+                <div class="option-container">
+                    <div class="option-area">
+                        <div class="sort-area">
+                            <div class="option-title">
+                                <div class="inbox" data-value="0">
+                                    <div class="option-name">정렬</div>
+                                    <div class="fas fa-chevron-down"></div>
+                                </div>
+                            </div>
+                            <div class="sort-list-area hide-op">
+                                <!-- 정렬 아이템 -->
+                                <div class="sort-item-area" data-value="1">
+                                    <div class="sort-item">이름(내림차순)</div>
+                                    <div class="sort-check"><div class="in-box sort-checked"></div></div>
+                                </div>
+
+                                <!-- 정렬 아이템 -->
+                                <div class="sort-item-area" data-value="0">
+                                    <div class="sort-item">이름(오름차순)</div>
+                                    <div class="sort-check"><div class="in-box"></div></div>
+                                </div>
+
+                                <!-- 정렬 아이템 -->
+                                <div class="sort-item-area" data-value="0">
+                                    <div class="sort-item">발매일(내림차순)</div>
+                                    <div class="sort-check"><div class="in-box"></div></div>
+                                </div>
+
+                                <!-- 정렬 아이템 -->
+                                <div class="sort-item-area" data-value="0">
+                                    <div class="sort-item">발매일(내림차순)</div>
+                                    <div class="sort-check"><div class="in-box"></div></div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
     
     
+    <footer>footer</footer>
+
 
     <!-- javascript -->
     <script
@@ -370,6 +696,31 @@
 
             $("html, body").animate({scrollTop : offset.top},400);
         });
+
+        // 옵션 박스 오픈
+        $('.inbox').click(function(){
+            console.log($(this).attr('data-value'));
+            if($(this).attr('data-value') == 0) {
+                $(this).attr('data-value', 1);
+                $(this).children('.fas').addClass('open-option-box');
+                $('.sort-list-area').removeClass('hide-op');
+            } else {
+                $(this).attr('data-value', 0);
+                $(this).children('.fas').removeClass('open-option-box');
+                $('.sort-list-area').addClass('hide-op');
+            }
+            
+        });
+
+        // 정렬 옵션 아이템 선택 
+        $('.sort-item-area').click(function(){
+            $('.sort-item-area .sort-check .in-box').removeClass('sort-checked');
+            $('.sort-item-area').attr('data-value', 0);
+            $(this).children('.sort-check').children('.in-box').addClass('sort-checked');
+            $(this).attr('data-value', 1);
+        });
+
+
 
     </script>
 
