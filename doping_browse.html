@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>둘러보기 | Doping Music</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <link rel="shortcut icon" href="./img/pss_ico.ico.png">
+
+    <style>
+        
+        @font-face {
+            font-family: "apple-neo";
+            src: url("./Apple+산돌고딕+Neo/AppleSDGothicNeoB.ttf");
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'apple-neo';
+        }
+
+        img {
+            display: block;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+         
+
+        /* 상단바(상) */
+        .logo-bar-area {
+            display: flex;
+            width: 100%;
+            height: 50px;
+            background-color: black;
+            box-shadow: 0px 80px 20px 10px #e7e7e7;
+        }
+
+        .logo-img-box {
+            margin-left: auto;
+            height: 100%;
+            margin-right: 1%;
+        }
+
+        .logo-img-box img {
+            height: 100%;
+        }
+        /* 상단바(하) */
+        .link-menu-area ul {
+            font-size: 1.6rem;
+        }
+
+        .menu-area {
+            display: flex;
+            justify-content: space-around;
+            z-index: 999;
+        }
+
+        .fixed-bar {
+            position: fixed;
+            top: 0px;
+        }
+
+        .link-menu-area ul {
+            display: flex;
+            justify-content: end;
+            height: 100%;
+        }
+
+        .link-menu-area ul li, .link-menu-area ul a {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            
+            padding: 0 20px;
+            border-top: 2px solid rgba(255, 255, 255, 0);
+            border-bottom: 2px solid rgba(255, 255, 255, 0);
+
+            transition-property: all;
+            transition-duration: 0.5s;
+        }
+
+        .link-menu-area ul a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .link-menu-area ul li:hover, .link-menu-area ul a:hover {
+            border-bottom: 2px solid black;
+            transition-timing-function: linear;
+        }
+        
+        .logo-area img {
+            width: 220px;
+        }
+
+        .side-box {
+            width: 220px;
+        }
+        
+        .link-menu-area {
+            width: 70%;
+        }
+
+        .menu-area {
+            display: flex;
+            width: 100%;
+            height: 60px;
+            background-color: #fff;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        /* 메인 */
+
+        .content-container {
+            width: 90%;
+            margin: 0 auto;
+
+            margin-top: 3%;
+        }
+
+        .content-area {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .post-container {
+            width: 75%;
+
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .option-container {
+            width: 20%;
+        }
+
+        .list-title-area {
+            margin: 0 1%;
+            font-size: 4rem;
+            background-color: burlywood;
+        }
+
+        .item-count-area {
+            margin: 0 1%;
+            font-size: 1.6rem;
+            background-color: cadetblue;
+        }
+
+        .post-list-area {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .post-item {
+            width: 15.5%;
+            margin: 0.584%;
+        }
+
+        .post-item a {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+        }
+
+        .post-img-area img {
+            width: 100%;
+            padding: 1%;
+            border-radius: 10px;
+            border: 2px solid rgba(0, 0, 255, 0);
+            
+        }
+
+        .post-img-area img:hover {
+            border: 2px solid rgb(0, 0, 0);
+            filter: brightness(85%);
+        }
+
+        .post-title {
+            font-size: 1.6rem;
+            color: black;
+        }
+
+        .post-artist {
+            font-size: 1.5rem;
+            color: #747474;
+        }
+
+        .post-info-area {
+            padding: 2%;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 상단 메뉴 -->
+    <div class="menu-container">
+        <div class="logo-bar-area">
+            <div class="logo-img-box">
+                <img src="img/logo.png" alt="">
+            </div>
+        </div>
+
+        <div class="menu-area">
+            <div class="logo-area side-box">
+                <img src="img/logo2.png" alt="">
+            </div>
+            <div class="link-menu-area">
+                <ul>
+                    <li>추천 앨범</li>
+                    <li>주인장 추천</li>
+                    <li>추천 아티스트</li>
+                    <li>장르별 앨범</li>
+                    <a href="#">둘러보기</a>
+                </ul>
+            </div>
+            <!-- <div class="menu-empty-box side-box"></div> -->
+        </div>
+    </div>
+
+    <main>
+        <div class="content-container">
+            <div class="content-area">
+                <div class="post-container">
+                    <div class="list-title-area">모든 앨범</div>
+                    <div class="item-count-area">808 musics</div>
+                    <div class="post-list-area">
+                        <!-- 포스트 -->
+                        <div class="post-item">
+                            <a href="">
+                                <div class="post-img-area">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
+                                </div>
+                                <div class="post-info-area">
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 포스트 -->
+                        <div class="post-item">
+                            <a href="">
+                                <div class="post-img-area">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
+                                </div>
+                                <div class="post-info-area">
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 포스트 -->
+                        <div class="post-item">
+                            <a href="">
+                                <div class="post-img-area">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
+                                </div>
+                                <div class="post-info-area">
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 포스트 -->
+                        <div class="post-item">
+                            <a href="">
+                                <div class="post-img-area">
+                                    <img src="img/이방인.png" alt="">
+                                </div>
+                                <div class="post-info-area">
+                                    <div class="post-title">이방인</div>
+                                    <div class="post-artist">E SENS</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 포스트 -->
+                        <div class="post-item">
+                            <a href="">
+                                <div class="post-img-area">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
+                                </div>
+                                <div class="post-info-area">
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 포스트 -->
+                        <div class="post-item">
+                            <a href="">
+                                <div class="post-img-area">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
+                                </div>
+                                <div class="post-info-area">
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 포스트 -->
+                        <div class="post-item">
+                            <a href="">
+                                <div class="post-img-area">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
+                                </div>
+                                <div class="post-info-area">
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
+                                </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+                    <div class="pagenation-area"></div>
+                </div>
+                <!-- 옵션 영역 -->
+                <div class="option-container"></div>
+            </div>
+        </div>
+    </main>
+
+    
+    
+
+    <!-- javascript -->
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script>
+
+
+        // 스크롤 시 상단 헤더 메뉴 fiexd
+        $(document).scroll(function(){
+            let wheel = $(document).scrollTop();
+            if(wheel > 50) {
+                $('.menu-area').addClass('fixed-bar');
+            } else {
+                $('.menu-area').removeClass('fixed-bar');
+            }
+        });
+
+        // 스크롤 이동 메뉴
+        $('.link-menu-area ul li').click(function(){
+            let offset;
+            if($(this).text() == "추천 앨범") {
+                offset = $('.logo-bar-area').offset();
+            } else if($(this).text() == "주인장 추천") {
+                offset = $('.page1').offset();
+            } else if($(this).text() == "추천 아티스트") {
+                offset = $('.page2').offset();
+            } else if($(this).text() == "장르별 앨범") {
+                offset = $('.page3').offset();
+            }
+
+            $("html, body").animate({scrollTop : offset.top},400);
+        });
+
+    </script>
+
+</body>
+</html>
