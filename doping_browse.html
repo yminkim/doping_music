@@ -139,9 +139,16 @@
             flex-direction: column;
         }
         
-        .option-container {
-            width: 20%;
+        .option-area {
+            height: 85.5%;
+            overflow: scroll;
+            overflow-x: hidden;
         }
+        
+        .option-area::-webkit-scrollbar {
+            display: none;
+        }
+        
 
         .list-title-area {
             margin: 0 1%;
@@ -239,15 +246,12 @@
 
         /* 옵션 영역 */
         .option-container {
+            width: 20%;
             height: 950px;
             display: flex;
             flex-direction: column;
             justify-content: end;
             
-        }
-
-        .option-area {
-            height: 85.5%;
         }
 
         .option-title {
@@ -272,19 +276,34 @@
             align-items: center;
             font-size: 2.2rem;
             justify-content: space-between;
+            cursor: pointer;
         }
 
         .open-option-box {
             transform: rotate(180deg);
         }
 
-        .sort-item-area {
+        .sort-item-area, .list-box {
             display: flex;
             align-items: center;
             padding: 5%;
             font-size: 1.6rem;
             width: 97%;
             height: 4.5rem;
+            border-radius: 5px;
+            border: 1px solid black;
+            margin: 0.5% 0;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .search-op-box {
+            display: flex;
+            align-items: center;
+            padding: 5%;
+            font-size: 1.6rem;
+            width: 97%;
+            height: 9rem;
             border-radius: 5px;
             border: 1px solid black;
             margin: 0.5% 0;
@@ -317,6 +336,59 @@
 
         .hide-op {
             display: none;
+        }
+
+        .search-artist-btn {
+            width: 4.5rem;
+            height: 4.5rem;
+            background-color: rgb(207, 207, 207);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+            bottom: 0.3rem;
+        }
+
+        .artist-search-op {
+            margin: 2% 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .artist-search-op input {
+            width: 60%;
+            height: 2.5rem;
+            position: relative;
+            bottom: 0.3rem;
+        }
+
+        .artist-search-op input:focus {
+            outline: none;
+        }
+
+        .search-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 80%;
+        }
+
+        .overlap-op {
+            background-color: #3c3c3c;
+            color: #fff;
+        }
+        
+        .option-refresh {
+            font-size: 1.6rem;
+            margin: 0 0.5rem 0.5rem auto;
+            border: 1px solid rgba(0, 0, 0, 0);
+            cursor: pointer;
+        }
+
+        .option-refresh:hover {
+            border-bottom: 1px solid black;
+            
         }
 
     </style>
@@ -616,8 +688,11 @@
                 </div>
                 <!-- 옵션 영역 -->
                 <div class="option-container">
+                    <div class="option-refresh">필터 지우기</div>
                     <div class="option-area">
-                        <div class="sort-area">
+
+                        <!-- 정렬 옵션 -->
+                        <div class="sort-area option-box-container">
                             <div class="option-title">
                                 <div class="inbox" data-value="0">
                                     <div class="option-name">정렬</div>
@@ -650,6 +725,69 @@
                                 </div>
 
 
+                            </div>
+                        </div>
+
+                        <!-- 아티스트 검색 -->
+                        <div class="search-artist-area option-box-container">
+                            <div class="option-title">
+                                <div class="inbox" data-value="0">
+                                    <div class="option-name">아티스트 검색</div>
+                                    <div class="fas fa-chevron-down"></div>
+                                </div>
+                            </div>
+                            <div class="sort-list-area hide-op">
+                                <!-- 아티스트 검색 아이템 -->
+                                <div class="search-op-box">
+                                    <div class="search-box">
+                                        <div class="artist-search-op">앨범 음악가<input type="text"></div>
+                                        <div class="artist-search-op">참여 음악가<input type="text"></div>
+                                    </div>
+                                    <div class="search-artist-btn">적용</div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                        <!-- 장르 옵션 -->
+                        <div class="genre-op-area option-box-container">
+                            <div class="option-title">
+                                <div class="inbox" data-value="0">
+                                    <div class="option-name">장르</div>
+                                    <div class="fas fa-chevron-down"></div>
+                                </div>
+                            </div>
+                            <div class="sort-list-area genre-boxx hide-op">
+                                <!-- 장르 아이템 -->
+                                <div class="list-box" data-genre="0">랩 / HIPHOP</div>
+                                <div class="list-box" data-genre="0">팝송 / POP</div>
+                                <div class="list-box" data-genre="0">한국 / K-POP</div>
+                                <div class="list-box" data-genre="0">일본 / J-POP</div>
+                                <div class="list-box" data-genre="0">ROCK</div>
+                                <div class="list-box" data-genre="0">EDM</div>
+                                <div class="list-box" data-genre="0">애니메이션 / 애니송</div>
+                                <div class="list-box" data-genre="0">클래식</div>
+                                <div class="list-box" data-genre="0">JAZZ</div>
+                                <div class="list-box" data-genre="0">트로트</div>
+                                <div class="list-box" data-genre="0">발라드</div>
+                            </div>
+                        </div>
+                        <!-- -- -->
+                        <!-- 국가 옵션 -->
+                        <div class="genre-op-area option-box-container">
+                            <div class="option-title">
+                                <div class="inbox" data-value="0">
+                                    <div class="option-name">국가</div>
+                                    <div class="fas fa-chevron-down"></div>
+                                </div>
+                            </div>
+                            <div class="sort-list-area country-boxx hide-op">
+                                <!-- 국가 아이템 -->
+                                <div class="list-box" data-value="0">대한민국</div>
+                                <div class="list-box" data-value="0">미국</div>
+                                <div class="list-box" data-value="0">일본</div>
+                                <div class="list-box" data-value="0">영국</div>
                             </div>
                         </div>
                     </div>
@@ -703,11 +841,11 @@
             if($(this).attr('data-value') == 0) {
                 $(this).attr('data-value', 1);
                 $(this).children('.fas').addClass('open-option-box');
-                $('.sort-list-area').removeClass('hide-op');
+                $(this).parent('.option-title').parent('.option-box-container').children('.sort-list-area').removeClass('hide-op');
             } else {
                 $(this).attr('data-value', 0);
                 $(this).children('.fas').removeClass('open-option-box');
-                $('.sort-list-area').addClass('hide-op');
+                $(this).parent('.option-title').parent('.option-box-container').children('.sort-list-area').addClass('hide-op');
             }
             
         });
@@ -718,6 +856,41 @@
             $('.sort-item-area').attr('data-value', 0);
             $(this).children('.sort-check').children('.in-box').addClass('sort-checked');
             $(this).attr('data-value', 1);
+        });
+
+        // 장르 선택 
+        $('.genre-boxx .list-box').click(function(){
+            if($(this).attr('data-genre') == 0) {
+                $(this).attr('data-genre', '1');
+                $(this).addClass('overlap-op');
+            } else {
+                $(this).attr('data-genre', '0');
+                $(this).removeClass('overlap-op');
+            }
+        });
+
+        // 국가 선택
+        $('.country-boxx .list-box').click(function(){
+            if($(this).attr('data-value') == 0) {
+                $(this).attr('data-value', '1');
+                $(this).addClass('overlap-op');
+            } else {
+                $(this).attr('data-value', '0');
+                $(this).removeClass('overlap-op');
+            }
+        });
+
+        // 필터 초기화
+        $('.option-refresh').click(function(){
+            // 검색 옵션 초기화
+            $('.artist-search-op input').val('');
+            // 장르 초기화
+            $('.genre-boxx .list-box').attr('data-genre', 0);
+            $('.genre-boxx .list-box').removeClass('overlap-op');
+            // 국가 초기화
+            $('.country-boxx .list-box').attr('data-value', 0);
+            $('.country-boxx .list-box').removeClass('overlap-op');
+
         });
 
 
