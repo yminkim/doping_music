@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Artist | Doping Music</title>
+    <title>(아티스트명) | Doping Music</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
     <link rel="shortcut icon" href="./img/pss_ico.ico.png">
 
@@ -67,6 +67,7 @@
             justify-content: end;
             height: 100%;
         }
+
 
         .link-menu-area ul li, .link-menu-area ul a {
             list-style: none;
@@ -453,11 +454,13 @@
             </div>
             <div class="link-menu-area">
                 <ul>
-                    <li>추천 앨범</li>
+                    <!-- <li>추천 앨범</li>
                     <li>주인장 추천</li>
                     <li>추천 아티스트</li>
-                    <li>장르별 앨범</li>
-                    <a href="#">둘러보기</a>
+                    <li>장르별 앨범</li> -->
+                    <a href="">Doping Music</a>
+                    <a href="">Aritst</a>
+                    <a href="#">Album</a>
                 </ul>
             </div>
             <!-- <div class="menu-empty-box side-box"></div> -->
@@ -634,8 +637,8 @@
                 <div class="title-box comment-title">코멘트</div>
                 <div class="comment-input-container">
                     <div class="comment-input-area">
-                        <textarea name="" id="" maxlength="100" placeholder="어떤 아티스트인가요?"></textarea>
-                        <div class="text-count-box">(000/100)</div>
+                        <textarea name="" id="" maxlength="99" placeholder="어떤 아티스트인가요?"></textarea>
+                        <div class="text-count-box">(0/100)</div>
                     </div>
                     <button>등록</button>
                 </div>
@@ -739,7 +742,10 @@
             $(this).addClass('bold');
         });
 
-
+        // 글자수 카운트
+        $('.comment-input-area textarea').keyup(function(){
+            $('.text-count-box').text('('+$('.comment-input-area textarea').val().length+'/100)')
+        });
 
     
     </script>

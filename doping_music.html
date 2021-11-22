@@ -66,6 +66,10 @@
             height: 100%;
         }
 
+        .checked-menu {
+            background-color: #e7e7e7;
+        }
+
         .link-menu-area ul li, .link-menu-area ul a {
             list-style: none;
             display: flex;
@@ -153,6 +157,8 @@
             color: #fff;
             font-size: 3rem;
             
+            display: flex;
+            align-items: center;
             
         }
 
@@ -170,6 +176,9 @@
             text-decoration: none;
         }
 
+        .album-genre-jacket img {
+            width: 100%;
+        }
 
         .cd-icon img {
             width: 97%;
@@ -519,9 +528,12 @@
             flex-direction: column;
         }
 
-        .focus-album-effect {
+        .focus-album-effect, .recom-album-item:hover {
             box-shadow: 0px 0px 15px 5px grey
         }
+
+
+        
     </style>
 </head>
 <body>
@@ -539,11 +551,13 @@
             </div>
             <div class="link-menu-area">
                 <ul>
-                    <li>추천 앨범</li>
+                    <!-- <li>추천 앨범</li>
                     <li>주인장 추천</li>
                     <li>추천 아티스트</li>
-                    <li>장르별 앨범</li>
-                    <a href="#">둘러보기</a>
+                    <li>장르별 앨범</li> -->
+                    <a href="">Doping Music</a>
+                    <a href="">Aritst</a>
+                    <a href="#">Album</a>
                 </ul>
             </div>
             <!-- <div class="menu-empty-box side-box"></div> -->
@@ -767,10 +781,9 @@
             <div class="name-box-area">
                 <div class="area-name-box page2">
                     <div>추천 아티스트</div>
-                    <div>
-                        <i class="fas fa-redo"></i>
-                        <div><a href="">더보기</a></div>
-                    </div>
+                    
+                    <i class="fas fa-redo"></i>
+                    
                 </div>
                 
             </div>
@@ -930,7 +943,7 @@
                 <!-- 포스트 -->
                 <div class="genre-post-item">
                     <div class="album-genre-jacket">
-                        <a href="#">힙합/R&B</a>
+                        <a href="#" ><img src="img/장르/힙합.png" alt=""></a>
                     </div>
                     <div class="cd-icon">
                         <img src="img/test_cd.png" alt="">
@@ -940,30 +953,30 @@
                 <!-- 포스트 -->
                 <div class="genre-post-item">
                     <div class="album-genre-jacket">
-                        <a href="#">밴드음악</a>
+                        <a href="#"><img src="img/장르/케이팝.png" alt=""></a>
                     </div>
                     <div class="cd-icon">
-                        <img src="img/test_cd.png" alt="">
+                        <img src="img/장르/lp_케이팝.png" alt="">
                     </div>
                 </div>
 
                 <!-- 포스트 -->
                 <div class="genre-post-item">
                     <div class="album-genre-jacket">
-                        <a href="#">밴드음악</a>
+                        <a href="#"><img src="img/장르/팝.png" alt=""></a>
                     </div>
                     <div class="cd-icon">
-                        <img src="img/test_cd.png" alt="">
+                        <img src="img/장르/lp_팝.png" alt="">
                     </div>
                 </div>
 
                 <!-- 포스트 -->
                 <div class="genre-post-item">
                     <div class="album-genre-jacket">
-                        <a href="#">밴드음악</a>
+                        <a href="#"><img src="img/장르/제이팝.png" alt=""></a>
                     </div>
                     <div class="cd-icon">
-                        <img src="img/test_cd.png" alt="">
+                        <img src="img/장르/lp_제이팝.png" alt="">
                     </div>
                 </div>
             </div>
@@ -972,30 +985,30 @@
                 <!-- 포스트 -->
                 <div class="genre-post-item">
                     <div class="album-genre-jacket">
-                        <a href="#">밴드음악</a>
+                        <a href="#"><img src="img/장르/밴드.png" alt=""></a>
                     </div>
                     <div class="cd-icon">
-                        <img src="img/test_cd.png" alt="">
+                        <img src="img/장르/lp_밴드.png" alt="">
                     </div>
                 </div>
 
                 <!-- 포스트 -->
                 <div class="genre-post-item">
                     <div class="album-genre-jacket">
-                        <a href="#">밴드음악</a>
+                        <a href="#"><img src="img/장르/재클.png" alt=""></a>
                     </div>
                     <div class="cd-icon">
-                        <img src="img/test_cd.png" alt="">
+                        <img src="img/장르/lp판.png" alt="">
                     </div>
                 </div>
 
                 <!-- 포스트 -->
                 <div class="genre-post-item">
                     <div class="album-genre-jacket">
-                        <a href="#">밴드음악</a>
+                        <a href="#"><img src="img/장르/애니송.png" alt=""></a>
                     </div>
                     <div class="cd-icon">
-                        <img src="img/test_cd.png" alt="">
+                        <img src="img/장르/lp_애니송.png" alt="">
                     </div>
                 </div>
 
