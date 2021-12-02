@@ -231,7 +231,7 @@
             justify-content: space-between;
         }
 
-        .name-box-area .area-name-box i {
+        .name-box-area .area-name-box a {
             display: flex;
             align-items: center;
             font-size: 2rem;
@@ -239,7 +239,12 @@
             cursor: pointer;
         }
 
-        .area-name-box i:active {
+        .area-name-box a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .area-name-box a:active {
             color: rgb(117, 4, 4);
         }
 
@@ -412,7 +417,7 @@
         footer {
             margin-top: 100px;
             width: 100%;
-            height: 300px;
+            height: 150px;
             background-color: rgb(58, 58, 58);
         }
 
@@ -421,7 +426,7 @@
         .recommend-album-title-area {
             font-size: 6rem;
             text-align: center;
-
+        
             margin: 120px 0 70px 0;
         }
 
@@ -555,9 +560,9 @@
                     <li>주인장 추천</li>
                     <li>추천 아티스트</li>
                     <li>장르별 앨범</li> -->
-                    <a href="">Doping Music</a>
-                    <a href="">Aritst</a>
-                    <a href="#">Album</a>
+                    <a href="/doping_music">Doping Music</a>
+                    <a href="/doping_artist_browse">Aritst</a>
+                    <a href="/doping_browse">Album</a>
                 </ul>
             </div>
             <!-- <div class="menu-empty-box side-box"></div> -->
@@ -585,7 +590,7 @@
                     <div class="boxx1">
                         <!-- 포스트 -->
                         <div id='ma-post1' class="move-album-item">
-                            <a href="#">
+                            <a href="/doping_album">
                                 <div class="ma-img">
                                     <img src="img/빈지노24.png" alt="">
                                 </div>
@@ -598,7 +603,7 @@
 
                         <!-- 포스트 -->
                         <div id='ma-post2' class="move-album-item">
-                            <a href="#">
+                            <a href="/doping_album">
                                 <div class="ma-img">
                                     <img src="img/트와이스필스페셜.png" alt="">
                                 </div>
@@ -611,7 +616,7 @@
 
                         <!-- 포스트 -->
                         <div id='ma-post3' class="move-album-item">
-                            <a href="#">
+                            <a href="/doping_album">
                                 <div class="ma-img">
                                     <img src="img/호랑이소굴커버.png" alt="">
                                 </div>
@@ -624,7 +629,7 @@
 
                         <!-- 포스트 -->
                         <div id='ma-post4' class="move-album-item">
-                            <a href="#">
+                            <a href="/doping_album">
                                 <div class="ma-img">
                                     <img src="img/나플라wu.png" alt="">
                                 </div>
@@ -637,7 +642,7 @@
 
                         <!-- 포스트 -->
                         <div id='ma-post5' class="move-album-item">
-                            <a href="#">
+                            <a href="/doping_album">
                                 <div class="ma-img">
                                     <img src="img/이매진드래곤앨범.png" alt="">
                                 </div>
@@ -650,7 +655,7 @@
 
                         <!-- 포스트 -->
                         <div id='ma-post6' class="move-album-item">
-                            <a href="#">
+                            <a href="/doping_album">
                                 <div class="ma-img">
                                     <img src="img/빈지노24.png" alt="">
                                 </div>
@@ -663,7 +668,7 @@
 
                         <!-- 포스트 -->
                         <div id='ma-post7' class="move-album-item">
-                            <a href="#">
+                            <a href="/doping_album">
                                 <div class="ma-img">
                                     <img src="img/트와이스필스페셜.png" alt="">
                                 </div>
@@ -676,7 +681,7 @@
 
                         <!-- 포스트 -->
                         <div id='ma-post8' class="move-album-item">
-                            <a href="#">
+                            <a href="/doping_album">
                                 <div class="ma-img">
                                     <img src="img/호랑이소굴커버.png" alt="">
                                 </div>
@@ -689,7 +694,7 @@
 
                         <!-- 포스트 -->
                         <div id='ma-post9' class="move-album-item">
-                            <a href="#">
+                            <a href="/doping_album">
                                 <div class="ma-img">
                                     <img src="img/나플라wu.png" alt="">
                                 </div>
@@ -702,7 +707,7 @@
 
                         <!-- 포스트 -->
                         <div id='ma-post10' class="move-album-item">
-                            <a href="#">
+                            <a href="/doping_album">
                                 <div class="ma-img">
                                     <img src="img/이매진드래곤앨범.png" alt="">
                                 </div>
@@ -731,7 +736,7 @@
                 <div class="focus-album-area">
                     
                     <div class="focus-album-img">
-                        <a href="">
+                        <a href="/doping_album">
                             <img class="fai" src="img/호랑이소굴커버.png" alt="">
                         </a>
                     </div>
@@ -741,7 +746,7 @@
                         <div class="focus-album-detail">기리보이 | HIP-HOP | 2019-10-13</div>
                         <div class="my-description">
                             <div>
-                                <div class="album-point">4/5</div>
+                                <div class="album-point">4.1/5</div>
                             </div>
                             <div class="ap-area">
                                 <div class="ap-title">주인장 추천 평점</div>
@@ -751,23 +756,23 @@
                     </div>
                 </div>
                 <div class="recom-album-list">
-                    <div class="recom-album-item focus-album-effect">
+                    <div class="recom-1 recom-album-item focus-album-effect">
                         <img src="img/호랑이소굴커버.png" alt="">
                     </div>
 
-                    <div class="recom-album-item">
+                    <div class="recom-2 recom-album-item">
                         <img src="img/빈지노24.png" alt="">
                     </div>
 
-                    <div class="recom-album-item">
+                    <div class="recom-3 recom-album-item">
                         <img src="img/트와이스필스페셜.png" alt="">
                     </div>
 
-                    <div class="recom-album-item">
+                    <div class="recom-4 recom-album-item">
                         <img src="img/나플라wu.png" alt="">
                     </div>
 
-                    <div class="recom-album-item">
+                    <div class="recom-5 recom-album-item">
                         <img src="img/이매진드래곤앨범.png" alt="">
                     </div>
                 </div>
@@ -782,7 +787,7 @@
                 <div class="area-name-box page2">
                     <div>추천 아티스트</div>
                     
-                    <i class="fas fa-redo"></i>
+                    <a href="/doping_artist_browse" class="fas fa-plus"></a>
                     
                 </div>
                 
@@ -791,7 +796,7 @@
                 <div class="artist-area">
                     <!-- 포스트 -->
                     <div class="artist-post-item">
-                        <a href="">
+                        <a href="/doping_artist">
                             <div class="artist-img-box">
                                 <div class="artist-detail-box">
                                     <div class="fas fa-plus"></div>
@@ -805,7 +810,7 @@
 
                     <!-- 포스트 -->
                     <div class="artist-post-item">
-                        <a href="">
+                        <a href="/doping_artist">
                             <div class="artist-img-box">
                                 <div class="artist-detail-box">
                                     <div class="fas fa-plus"></div>
@@ -819,7 +824,7 @@
 
                     <!-- 포스트 -->
                     <div class="artist-post-item">
-                        <a href="">
+                        <a href="/doping_artist">
                             <div class="artist-img-box">
                                 <div class="artist-detail-box">
                                     <div class="fas fa-plus"></div>
@@ -833,7 +838,7 @@
 
                     <!-- 포스트 -->
                     <div class="artist-post-item">
-                        <a href="">
+                        <a href="/doping_artist">
                             <div class="artist-img-box">
                                 <div class="artist-detail-box">
                                     <div class="fas fa-plus"></div>
@@ -847,7 +852,7 @@
 
                     <!-- 포스트 -->
                     <div class="artist-post-item">
-                        <a href="">
+                        <a href="/doping_artist">
                             <div class="artist-img-box">
                                 <div class="artist-detail-box">
                                     <div class="fas fa-plus"></div>
@@ -861,7 +866,7 @@
 
                     <!-- 포스트 -->
                     <div class="artist-post-item">
-                        <a href="">
+                        <a href="/doping_artist">
                             <div class="artist-img-box">
                                 <div class="artist-detail-box">
                                     <div class="fas fa-plus"></div>
@@ -875,7 +880,7 @@
 
                     <!-- 포스트 -->
                     <div class="artist-post-item">
-                        <a href="">
+                        <a href="/doping_artist">
                             <div class="artist-img-box">
                                 <div class="artist-detail-box">
                                     <div class="fas fa-plus"></div>
@@ -889,7 +894,7 @@
 
                     <!-- 포스트 -->
                     <div class="artist-post-item">
-                        <a href="">
+                        <a href="/doping_artist">
                             <div class="artist-img-box">
                                 <div class="artist-detail-box">
                                     <div class="fas fa-plus"></div>
@@ -903,7 +908,7 @@
 
                     <!-- 포스트 -->
                     <div class="artist-post-item">
-                        <a href="">
+                        <a href="/doping_artist">
                             <div class="artist-img-box">
                                 <div class="artist-detail-box">
                                     <div class="fas fa-plus"></div>
@@ -917,7 +922,7 @@
 
                     <!-- 포스트 -->
                     <div class="artist-post-item">
-                        <a href="">
+                        <a href="/doping_artist">
                             <div class="artist-img-box">
                                 <div class="artist-detail-box">
                                     <div class="fas fa-plus"></div>
@@ -943,7 +948,7 @@
                 <!-- 포스트 -->
                 <div class="genre-post-item">
                     <div class="album-genre-jacket">
-                        <a href="#" ><img src="img/장르/힙합.png" alt=""></a>
+                        <a href="/doping_browse" ><img src="img/장르/힙합.png" alt=""></a>
                     </div>
                     <div class="cd-icon">
                         <img src="img/test_cd.png" alt="">
@@ -953,7 +958,7 @@
                 <!-- 포스트 -->
                 <div class="genre-post-item">
                     <div class="album-genre-jacket">
-                        <a href="#"><img src="img/장르/케이팝.png" alt=""></a>
+                        <a href="/doping_browse"><img src="img/장르/케이팝.png" alt=""></a>
                     </div>
                     <div class="cd-icon">
                         <img src="img/장르/lp_케이팝.png" alt="">
@@ -963,7 +968,7 @@
                 <!-- 포스트 -->
                 <div class="genre-post-item">
                     <div class="album-genre-jacket">
-                        <a href="#"><img src="img/장르/팝.png" alt=""></a>
+                        <a href="/doping_browse"><img src="img/장르/팝.png" alt=""></a>
                     </div>
                     <div class="cd-icon">
                         <img src="img/장르/lp_팝.png" alt="">
@@ -973,7 +978,7 @@
                 <!-- 포스트 -->
                 <div class="genre-post-item">
                     <div class="album-genre-jacket">
-                        <a href="#"><img src="img/장르/제이팝.png" alt=""></a>
+                        <a href="/doping_browse"><img src="img/장르/제이팝.png" alt=""></a>
                     </div>
                     <div class="cd-icon">
                         <img src="img/장르/lp_제이팝.png" alt="">
@@ -985,7 +990,7 @@
                 <!-- 포스트 -->
                 <div class="genre-post-item">
                     <div class="album-genre-jacket">
-                        <a href="#"><img src="img/장르/밴드.png" alt=""></a>
+                        <a href="/doping_browse"><img src="img/장르/밴드.png" alt=""></a>
                     </div>
                     <div class="cd-icon">
                         <img src="img/장르/lp_밴드.png" alt="">
@@ -995,7 +1000,7 @@
                 <!-- 포스트 -->
                 <div class="genre-post-item">
                     <div class="album-genre-jacket">
-                        <a href="#"><img src="img/장르/재클.png" alt=""></a>
+                        <a href="/doping_browse"><img src="img/장르/재클.png" alt=""></a>
                     </div>
                     <div class="cd-icon">
                         <img src="img/장르/lp판.png" alt="">
@@ -1005,7 +1010,7 @@
                 <!-- 포스트 -->
                 <div class="genre-post-item">
                     <div class="album-genre-jacket">
-                        <a href="#"><img src="img/장르/애니송.png" alt=""></a>
+                        <a href="/doping_browse"><img src="img/장르/애니송.png" alt=""></a>
                     </div>
                     <div class="cd-icon">
                         <img src="img/장르/lp_애니송.png" alt="">
@@ -1019,7 +1024,7 @@
         
     </main>
 
-    <footer>footer</footer>
+    <footer></footer>
     
     
 
@@ -1117,6 +1122,46 @@
             $(this).addClass('focus-album-effect');
             let img_src = $(this).children('img').attr("src");
             $('.fai').attr("src", img_src);
+
+
+            // 정보 변경
+            let album_title;
+            let artist_release;
+            let score;
+            let comment;
+
+            if($(this).hasClass('recom-1') == true) {
+                album_title = "호랑이소굴";
+                artist_release = "기리보이 | HIP-HOP | 2019-10-13";
+                score = "4.1/5";
+                comment = "지칠 때 한 번 정도 힘이되어 주는 노래";
+            } else if($(this).hasClass('recom-2') == true) {
+                album_title = "2 4 : 2 6";
+                artist_release = "Beenzino | HIP-HOP | 2012-07-03";
+                score = "4.7/5";
+                comment = "장르는 예술, 힙합은 매체일뿐";
+            } else if($(this).hasClass('recom-3') == true) {
+                album_title = "Feel Special";
+                artist_release = "TWICE | K-POP | 2019-09-23";
+                score = "3.2/5";
+                comment = "TWICE, 4년간의 여정을 돌아보는 앨범";
+            } else if($(this).hasClass('recom-4') == true) {
+                album_title = "WU";
+                artist_release = "nafla | HIP-HOP | 2015-05-31";
+                score = "4.8/5";
+                comment = "래퍼들의 찬가";
+            } else if($(this).hasClass('recom-5') == true) {
+                album_title = "EVOLVE";
+                artist_release = "IMAGINE DRAGONS | POP | 2017-06-23";
+                score = "3.9/5";
+                comment = "전투력 상승 200%";
+            }
+
+            $('.focus-album-title').text(album_title);
+            $('.focus-album-detail').text(artist_release);
+            $('.album-point').text(score);
+            $('.ap-description').text(comment);
+
         });
 
         // 스크롤 이동 메뉴
@@ -1134,6 +1179,12 @@
 
             $("html, body").animate({scrollTop : offset.top},400);
         });
+
+        //
+        
+
+        //(#recom-1)
+
 
     </script>
 

@@ -9,7 +9,7 @@
     <style>
         @font-face {
             font-family: "apple-neo";
-            src: url("./Apple+산돌고딕+Neo/AppleSDGothicNeoB.ttf");
+            src: url("./fonts/AppleSDGothicNeoB.ttf");
         }
 
         * {

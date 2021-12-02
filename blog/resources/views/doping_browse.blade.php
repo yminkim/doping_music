@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Aritst | Doping Music</title>
+    <title>둘러보기 | Doping Music</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
     <link rel="shortcut icon" href="./img/pss_ico.ico.png">
 
@@ -10,7 +10,7 @@
         
         @font-face {
             font-family: "apple-neo";
-            src: url("./Apple+산돌고딕+Neo/AppleSDGothicNeoB.ttf");
+            src: url("./fonts/AppleSDGothicNeoB.ttf");
         }
 
         * {
@@ -26,7 +26,6 @@
 
         html {
             font-size: 10px;
-            background-color: rgb(26, 26, 26);
         }
 
          
@@ -37,6 +36,7 @@
             width: 100%;
             height: 50px;
             background-color: black;
+            box-shadow: 0px 80px 20px 10px #e7e7e7;
         }
 
         .logo-img-box {
@@ -51,6 +51,10 @@
         /* 상단바(하) */
         .link-menu-area ul {
             font-size: 1.6rem;
+        }
+
+        .checked-menu {
+            background-color: #e7e7e7;
         }
 
         .menu-area {
@@ -68,10 +72,6 @@
             display: flex;
             justify-content: end;
             height: 100%;
-        }
-
-        .checked-menu {
-            background-color: rgb(26, 26, 26);
         }
 
         .link-menu-area ul li, .link-menu-area ul a {
@@ -157,13 +157,12 @@
         .list-title-area {
             margin: 0 1%;
             font-size: 4rem;
-            color: #fff;
         }
 
         .item-count-area {
             margin: 2% 1%;
             font-size: 1.6rem;
-            color: #b5b5b5;
+            color: #565656;
         }
 
         .post-list-area {
@@ -172,52 +171,41 @@
         }
 
         .post-item {
-            width: 18%;
-            margin: 1%;
-            
+            width: 15.5%;
+            margin: 0.58%;
         }
 
         .post-item a {
             display: flex;
-            align-items: center;
             flex-direction: column;
             text-decoration: none;
-            position: relative;
-            overflow: hidden;
         }
 
         .post-img-area img {
             width: 100%;
-            -webkit-filter: grayscale(100%);
-            filter: gray;
+            padding: 1%;
+            border-radius: 10px;
+            border: 2px solid rgba(0, 0, 255, 0);
             
         }
 
-        .scale_none {
-            filter: none !important;
+        .post-img-area img:hover {
+            border: 2px solid rgb(0, 0, 0);
+            filter: brightness(85%);
         }
 
         .post-title {
             font-size: 1.6rem;
-            color: #ffffff;
+            color: black;
         }
 
         .post-artist {
             font-size: 1.5rem;
-            color: #a9a9a9;
+            color: #747474;
         }
 
         .post-info-area {
-            width: 100%;
-            padding: 4% 7%;
-            position: absolute;
-            bottom: -6.4rem;
-            background-color: #000000ab;
-            transition: all 0.3s;
-        }
-
-        .post-info-up {
-            bottom: 0rem !important;
+            padding: 2%;
         }
 
         footer {
@@ -247,12 +235,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: rgb(216, 216, 216);
+            color: rgb(68, 68, 68);
         }
 
-        /* .page-box:hover {
+        .page-box:hover {
             color: black;
-        } */
+        }
 
         .checked-page {
             font-weight: bold;
@@ -280,12 +268,11 @@
         }
 
         .option-title:hover {
-            border: 2px solid rgb(209, 209, 209);
+            border: 2px solid black;
         }
 
         .inbox {
-            background-color: #565656;
-            color: black;
+            background-color: rgb(228, 228, 228);
             border-radius: 1rem;
             width: 100%;
             padding: 5%;
@@ -312,8 +299,6 @@
             margin: 0.5% 0;
             justify-content: space-between;
             cursor: pointer;
-            color: rgb(215 215 215);
-            background-color: rgb(44 44 44);
         }
 
         .search-op-box {
@@ -322,12 +307,11 @@
             padding: 5%;
             font-size: 1.6rem;
             width: 97%;
-            height: 5.5rem;
+            height: 9rem;
             border-radius: 5px;
             border: 1px solid black;
             margin: 0.5% 0;
             justify-content: space-between;
-            background-color: #c9c9c9;
         }
 
         .search-op-box .fas {
@@ -344,7 +328,7 @@
             width: 3rem;
             height: 3rem;
             border-radius: 3rem;
-            border: 1px solid rgb(255, 255, 255);
+            border: 1px solid black;
 
             display: flex;
             align-items: center;
@@ -355,7 +339,7 @@
             width: 2rem;
             height: 2rem;
             border-radius: 2rem;
-            background-color: rgb(218, 218, 218);
+            background-color: black;
         }
 
         .hide-op {
@@ -363,24 +347,25 @@
         }
 
         /* .search-artist-btn {
-            width: 4rem;
-            height: 4rem;
+            width: 4.5rem;
+            height: 4.5rem;
             background-color: rgb(207, 207, 207);
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
+            position: relative;
+            bottom: 0.3rem;
         } */
 
         .artist-search-op {
             margin: 2% 0;
             display: flex;
             justify-content: space-between;
-            color: rgb(0, 0, 0);
         }
 
         .artist-search-op input {
-            width: 80%;
+            width: 60%;
             height: 2.5rem;
             position: relative;
             bottom: 0.3rem;
@@ -398,8 +383,8 @@
         }
 
         .overlap-op {
-            background-color: #c9c9c9;
-            color: rgb(0, 0, 0);
+            background-color: #3c3c3c;
+            color: #fff;
         }
         
         .option-refresh {
@@ -407,11 +392,10 @@
             margin: 0 0.5rem 0.5rem auto;
             border: 1px solid rgba(0, 0, 0, 0);
             cursor: pointer;
-            color: #b5b5b5;
         }
 
         .option-refresh:hover {
-            border-bottom: 1px solid #b5b5b5;
+            border-bottom: 1px solid black;
             
         }
 
@@ -437,7 +421,7 @@
                     <li>추천 아티스트</li>
                     <li>장르별 앨범</li> -->
                     <a href="">Doping Music</a>
-                    <a href="" >Aritst</a>
+                    <a href="">Aritst</a>
                     <a href="#">Album</a>
                 </ul>
             </div>
@@ -449,18 +433,18 @@
         <div class="content-container">
             <div class="content-area">
                 <div class="post-container">
-                    <div class="list-title-area">아티스트</div>
-                    <div class="item-count-area">231 artists</div>
+                    <div class="list-title-area">모든 앨범</div>
+                    <div class="item-count-area">808 musics</div>
                     <div class="post-list-area">
                         <!-- 포스트 -->
                         <div class="post-item">
                             <a href="">
                                 <div class="post-img-area">
-                                    <img src="img/지디.png" alt="">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
                                 </div>
                                 <div class="post-info-area">
-                                    <div class="post-title">G-DRAGON</div>
-                                    <div class="post-artist">K-POP</div>
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
                                 </div>
                             </a>
                         </div>
@@ -469,11 +453,11 @@
                         <div class="post-item">
                             <a href="">
                                 <div class="post-img-area">
-                                    <img src="img/swings.png" alt="">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
                                 </div>
                                 <div class="post-info-area">
-                                    <div class="post-title">SWINGS</div>
-                                    <div class="post-artist">HIPHOP</div>
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
                                 </div>
                             </a>
                         </div>
@@ -482,11 +466,11 @@
                         <div class="post-item">
                             <a href="">
                                 <div class="post-img-area">
-                                    <img src="img/김심야.png" alt="">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
                                 </div>
                                 <div class="post-info-area">
-                                    <div class="post-title">Kim Ximya</div>
-                                    <div class="post-artist">HIPHOP</div>
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
                                 </div>
                             </a>
                         </div>
@@ -495,11 +479,11 @@
                         <div class="post-item">
                             <a href="">
                                 <div class="post-img-area">
-                                    <img src="img/레드벨벳.png" alt="">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
                                 </div>
                                 <div class="post-info-area">
-                                    <div class="post-title">레드벨벳</div>
-                                    <div class="post-artist">K-POP</div>
+                                    <div class="post-title">이방인</div>
+                                    <div class="post-artist">E SENS</div>
                                 </div>
                             </a>
                         </div>
@@ -508,35 +492,11 @@
                         <div class="post-item">
                             <a href="">
                                 <div class="post-img-area">
-                                    <img src="img/이선희.png" alt="">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
                                 </div>
                                 <div class="post-info-area">
-                                    <div class="post-title">이선희</div>
-                                    <div class="post-artist">발라드</div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- 포스트 -->
-                        <div class="post-item">
-                            <a href="">
-                                <div class="post-img-area">
-                                    <img src="img/헤이즈.png" alt="">
-                                </div>
-                                <div class="post-info-area">
-                                    <div class="post-title">헤이즈</div>
-                                    <div class="post-artist">K-POP</div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- 포스트 -->
-                        <div class="post-item">
-                            <a href="">
-                                <div class="post-img-area">
-                                    <img src="img/지디.png" alt="">
-                                </div>
-                                <div class="post-info-area">
-                                    <div class="post-title">G-DRAGON</div>
-                                    <div class="post-artist">K-POP</div>
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
                                 </div>
                             </a>
                         </div>
@@ -545,11 +505,11 @@
                         <div class="post-item">
                             <a href="">
                                 <div class="post-img-area">
-                                    <img src="img/swings.png" alt="">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
                                 </div>
                                 <div class="post-info-area">
-                                    <div class="post-title">SWINGS</div>
-                                    <div class="post-artist">HIPHOP</div>
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
                                 </div>
                             </a>
                         </div>
@@ -558,11 +518,11 @@
                         <div class="post-item">
                             <a href="">
                                 <div class="post-img-area">
-                                    <img src="img/김심야.png" alt="">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
                                 </div>
                                 <div class="post-info-area">
-                                    <div class="post-title">Kim Ximya</div>
-                                    <div class="post-artist">HIPHOP</div>
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
                                 </div>
                             </a>
                         </div>
@@ -571,11 +531,11 @@
                         <div class="post-item">
                             <a href="">
                                 <div class="post-img-area">
-                                    <img src="img/레드벨벳.png" alt="">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
                                 </div>
                                 <div class="post-info-area">
-                                    <div class="post-title">레드벨벳</div>
-                                    <div class="post-artist">K-POP</div>
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
                                 </div>
                             </a>
                         </div>
@@ -584,28 +544,81 @@
                         <div class="post-item">
                             <a href="">
                                 <div class="post-img-area">
-                                    <img src="img/이선희.png" alt="">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
                                 </div>
                                 <div class="post-info-area">
-                                    <div class="post-title">이선희</div>
-                                    <div class="post-artist">발라드</div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- 포스트 -->
-                        <div class="post-item">
-                            <a href="">
-                                <div class="post-img-area">
-                                    <img src="img/헤이즈.png" alt="">
-                                </div>
-                                <div class="post-info-area">
-                                    <div class="post-title">헤이즈</div>
-                                    <div class="post-artist">K-POP</div>
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
                                 </div>
                             </a>
                         </div>
 
-                        
+                        <!-- 포스트 -->
+                        <div class="post-item">
+                            <a href="">
+                                <div class="post-img-area">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
+                                </div>
+                                <div class="post-info-area">
+                                    <div class="post-title">이방인</div>
+                                    <div class="post-artist">E SENS</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 포스트 -->
+                        <div class="post-item">
+                            <a href="">
+                                <div class="post-img-area">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
+                                </div>
+                                <div class="post-info-area">
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 포스트 -->
+                        <div class="post-item">
+                            <a href="">
+                                <div class="post-img-area">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
+                                </div>
+                                <div class="post-info-area">
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
+                                </div>
+                            </a>
+                        </div>
+
+                       
+
+                        <!-- 포스트 -->
+                        <div class="post-item">
+                            <a href="">
+                                <div class="post-img-area">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
+                                </div>
+                                <div class="post-info-area">
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 포스트 -->
+                        <div class="post-item">
+                            <a href="">
+                                <div class="post-img-area">
+                                    <img src="img/이매진드래곤앨범.png" alt="">
+                                </div>
+                                <div class="post-info-area">
+                                    <div class="post-title">EVOLVE</div>
+                                    <div class="post-artist">IMAGINE DRAGONS</div>
+                                </div>
+                            </a>
+                        </div>
 
 
                     </div>
@@ -674,7 +687,8 @@
                                 <!-- 아티스트 검색 아이템 -->
                                 <div class="search-op-box">
                                     <div class="search-box">
-                                        <div class="artist-search-op">이름<input type="text"></div>
+                                        <div class="artist-search-op">앨범 음악가<input type="text"></div>
+                                        <div class="artist-search-op">참여 음악가<input type="text"></div>
                                     </div>
                                     <div class="fas fa-search"></div>
                                 </div>
@@ -825,21 +839,12 @@
             $('.country-boxx .list-box').attr('data-value', 0);
             $('.country-boxx .list-box').removeClass('overlap-op');
 
+
             $('.sort-list-area').addClass('hide-op');
             $('.inbox').attr('data-value', 0);
             $('.fa-chevron-down').removeClass('open-option-box');
         });
 
-
-        // 포스트 hover 시 아티스트 정보 올리기
-        $('.post-item').hover(function(){
-            $(this).children('a').children('.post-info-area').addClass('post-info-up');
-            $(this).children('a').children('.post-img-area').children('img').addClass('scale_none');
-
-        }, function(){
-            $(this).children('a').children('.post-info-area').removeClass('post-info-up');
-            $(this).children('a').children('.post-img-area').children('img').removeClass('scale_none');
-        });
 
 
     </script>

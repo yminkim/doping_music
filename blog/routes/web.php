@@ -13,6 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/doping_music', function () {
     return view('doping_music');
+});
+
+Route::get('/doping_artist_browse', function () {
+    return view('doping_artist_browse');
+});
+
+Route::get('/doping_browse', function () {
+    return view('doping_browse');
+});
+
+Route::get('/doping_artist', function () {
+    return view('doping_artist');
+});
+
+Route::get('/doping_album', function () {
+    return view('doping_album');
 });

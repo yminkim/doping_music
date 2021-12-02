@@ -10,7 +10,7 @@
         
         @font-face {
             font-family: "apple-neo";
-            src: url('{{ public_path('fonts/AppleSDGothicNeoB.ttf') }}');
+            src: url('fonts/AppleSDGothicNeoB.ttf');
         }
 
         * {
